@@ -6,7 +6,6 @@ class FacePlugin {
   MethodChannel _channel = MethodChannel("plugin.bughub.dev/fltbdface");
 
   initialize({String licenseId, String licenseFileName}) {
-    //"android-license-0000-face-android", "idl-license.face-android"
     _channel.invokeMethod("initialize",
         {"licenseId": licenseId, "licenseFileName": licenseFileName}).catchError((error) {
       print("initialize:$error");
@@ -15,7 +14,6 @@ class FacePlugin {
   }
 
   setFaceConfig(FaceConfig _config) {
-    print(_config.toJson());
     _channel.invokeMethod("setFaceConfig", _config.toJson()).catchError((error) {
       print("setFaceConfig:$error");
     });
