@@ -23,7 +23,6 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     private var delegate: FaceDelegate? = null
     private var activityBinding: ActivityPluginBinding? = null
     private var flutterBinding: FlutterPlugin.FlutterPluginBinding? = null
-    private var plugin: FltbdfacePlugin? = null
     private var channel: MethodChannel? = null
     private var application: Application? = null
 
