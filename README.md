@@ -4,9 +4,9 @@ Baidu&#x27;s face recognition SDK encapsulates the flutter version, calls native
 
 ## 声明
 
-插件是基于百度云人脸离线采集有活体动作版SDK(https://ai.baidu.com/ai-doc/FACE/Mk37c1pue#%E7%9B%AE%E5%BD%95)进行封装的
+插件是基于百度云人脸离线采集有活体动作版SDK(https://ai.baidu.com/ai-doc/FACE/Ek37c1q2g)进行封装的
 
-在使用插件之前要自行在百度云注册账号，并完成一系列配置之后，阅读https://ai.baidu.com/ai-doc/FACE/Mk37c1pue#22-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C 文档申请license
+在使用插件之前要自行在百度云注册账号，并完成一系列配置之后，阅读 Android:https://ai.baidu.com/ai-doc/FACE/Mk37c1pue#22-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C iOS:https://ai.baidu.com/ai-doc/FACE/pk37c1qan#221-%E7%94%B3%E8%AF%B7license 文档申请license
 
 ## 配置
 
