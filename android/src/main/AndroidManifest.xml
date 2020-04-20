@@ -1,3 +1,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="dev.bughub.plugin.fltbdface">
+    package="dev.bughub.plugin.fltbdface">
+
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+
+    <!-- 权限级别: dangerous -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 需要使用Feature -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application>
+
+        <activity
+            android:name=".face.BdFaceLivenessActivity"
+            android:theme="@style/FaceTheme" />
+    </application>
 </manifest>

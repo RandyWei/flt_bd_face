@@ -125,7 +125,7 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
 
     fun startFaceLiveness(messenger: BinaryMessenger) {
 
-        EventChannel(messenger, "com.chinahrt.app.pharmacist/event").setStreamHandler(object : EventChannel.StreamHandler {
+        EventChannel(messenger, "plugin.bughub.dev/event").setStreamHandler(object : EventChannel.StreamHandler {
             override fun onListen(o: Any?, sink: EventChannel.EventSink?) {
                 // 把eventSink存起来
                 eventSink.setDelegate(sink)
