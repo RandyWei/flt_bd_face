@@ -31,7 +31,6 @@ class _MyAppState extends State<MyApp> {
           child: RaisedButton(
             onPressed: () {
               faceService.startFaceLiveness(
-                  withMouth: true,
                   data: (data) {
                     print(data);
                   },
