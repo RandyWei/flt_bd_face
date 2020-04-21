@@ -45,18 +45,29 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
             return
         }
         else if call.method == "startFaceLiveness" {
+            
             let rootViewController = UIApplication.shared.delegate?.window??.rootViewController
+            
             if(nil == rootViewController){
                 result(FlutterError(code: "500", message: "rootViewController is nil.", details: "rootViewController is not set."))
                 return
             }
+            
             let detectController = LivenessViewController()
             detectController.resultHandler = { [weak self] imageString in
                 self?.eventSink?(imageString)
             }
-            let navController = UINavigationController(rootViewController: detectController)
-            navController.modalPresentationStyle = .fullScreen
-            rootViewController?.present(navController, animated: true, completion: nil)
+            
+//            let navController = UINavigationController(rootViewController: detectController)
+//            navController.modalPresentationStyle = .fullScreen
+//            rootViewController?.present(navController, animated: true, completion: nil)
+            
+//            let testController = TestViewController()
+//            let navController = UINavigationController(rootViewController: testController)
+//            navController.modalPresentationStyle = .fullScreen
+            
+            rootViewController?.present(detectController, animated: true, completion: nil)
+            
             return
         }
     }
