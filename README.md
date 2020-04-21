@@ -65,3 +65,5 @@ android {
 -keep class vi.com.** {*;}
 -dontwarn com.baidu.**
 ```
+
+### iOS

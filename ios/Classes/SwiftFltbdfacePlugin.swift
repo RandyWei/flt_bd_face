@@ -42,6 +42,7 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
             configModel?.liveActionArray = arguments["livenessTypeList"] as? NSMutableArray ?? []
             configModel?.isByOrder = !(arguments["isLivenessRandom"] as? Bool ?? true)
             configModel?.numOfLiveness = arguments["livenessRandomCount"] as? Int ?? 0
+            
             return
         }
         else if call.method == "startFaceLiveness" {
