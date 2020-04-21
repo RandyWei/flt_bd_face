@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setSDKLicense];
+//    [self setSDKLicense];
     [self initLivenessManager];
 }
 

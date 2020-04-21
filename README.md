@@ -8,9 +8,6 @@ Baidu&#x27;s face recognition SDK encapsulates the flutter version, calls native
 
 在使用插件之前要自行在百度云注册账号，并完成一系列配置之后，阅读 Android:https://ai.baidu.com/ai-doc/FACE/Mk37c1pue#22-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C iOS:https://ai.baidu.com/ai-doc/FACE/pk37c1qan#221-%E7%94%B3%E8%AF%B7license 文档申请license
 
-## 配置
-
-在百度云后台将 安卓-License文件下载后放置于android/app/src/main/assets下，如果没有该目录创建即可
 
 ## 安装
 
@@ -26,6 +23,9 @@ dependencies:
 ```
 
 ### Android
+
+在百度云后台将 安卓-License文件下载后放置于android/app/src/main/assets下，如果没有该目录创建即可
+
 android/app/build.gradle配置如下（以下只保留了本插件需要的配置，忽略了其他）
 ```
 android {
@@ -67,3 +67,9 @@ android {
 ```
 
 ### iOS
+
+使用Xcode打开ios项目
+
+- 将[com.baidu.idl.face.faceSDK.bundle]()和[com.baidu.idl.face.model.bundle]()文件添加到项目中
+
+- 在百度云后台将 iOS-License文件(idl-license.face-ios)下载后添加到项目中

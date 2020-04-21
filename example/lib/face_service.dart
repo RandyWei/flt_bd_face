@@ -11,7 +11,7 @@ class FaceService {
   FaceService() {
     if (Platform.isIOS) {
       _licenseId = 'pharmacist-license-face-ios'; //百度云后台licenseID
-      _licenseFileName = 'idl-license.face-ios';
+      _licenseFileName = 'idl-license.face-ios'; //放置在ios项目中的license文件
     } else {
       _licenseId = 'pharmacist-license-face-android'; //百度云后台licenseID
       _licenseFileName =
