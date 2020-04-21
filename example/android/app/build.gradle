@@ -36,9 +36,18 @@ android {
         disable 'InvalidPackage'
     }
 
+    signingConfigs {
+        Release {
+            keyAlias 'pharmacist-app'
+            keyPassword 'chinahrt00'
+            storeFile file('key')
+            storePassword 'chinahrt00'
+        }
+    }
+
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "dev.bughub.plugin.fltbdface_example"
+//        applicationId "dev.bughub.plugin.fltbdface_example"
+        applicationId "com.chinahrt.app.pharmacist"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
@@ -48,9 +57,12 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.Release
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.Release
         }
     }
 }
