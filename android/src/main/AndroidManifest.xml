@@ -4,6 +4,7 @@
     <!-- 权限级别: normal -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!-- 权限级别: dangerous -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -24,10 +25,17 @@
         android:name="android.hardware.camera.flash"
         android:required="false" />
 
-    <application>
+    <application android:networkSecurityConfig="@xml/network_security_config">
 
         <activity
-            android:name=".face.BdFaceLivenessActivity"
-            android:theme="@style/FaceTheme" />
+            android:name=".face.FaceLivenessExpActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_NoTitle"/>
+
+        <activity android:name=".face.CollectionSuccessExpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_NoTitle" />
     </application>
 </manifest>

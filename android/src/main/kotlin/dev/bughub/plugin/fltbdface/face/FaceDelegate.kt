@@ -8,6 +8,7 @@ import android.util.Log
 import com.baidu.idl.face.platform.FaceEnvironment
 import com.baidu.idl.face.platform.FaceSDKManager
 import com.baidu.idl.face.platform.LivenessTypeEnum
+import com.baidu.idl.face.platform.listener.IInitCallback
 import com.chinahrt.app.pharmacist.QueuingEventSink
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.EventChannel
@@ -48,7 +49,16 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
 //    }
 
     fun initialize(licenseId: String, licenseFileName: String) {
-        FaceSDKManager.getInstance().initialize(activity, licenseId, licenseFileName)
+        FaceSDKManager.getInstance().initialize(activity, licenseId, licenseFileName,object :IInitCallback{
+            override fun initSuccess() {
+                Log.i("FaceDelegate","初始化成功")
+            }
+
+            override fun initFailure(status: Int, message: String?) {
+                Log.e("FaceDelegate","$status  -----   $message")
+            }
+
+        })
     }
 
     fun setFaceConfig(livenessTypeList: List<Int>, livenessRandom: Boolean = false, blurnessValue: Float?,
@@ -80,10 +90,10 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
         else
             config.setBrightnessValue(brightnessValue)
 
-        if (null == cropFaceValue)
-            config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
-        else
-            config.setCropFaceValue(cropFaceValue)
+//        if (null == cropFaceValue)
+//            config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
+//        else
+//            config.setCropFaceValue(cropFaceValue)
 
         if (null == headPitchValue)
             config.setHeadPitchValue(FaceEnvironment.VALUE_HEAD_PITCH)
@@ -116,9 +126,9 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
             config.setOcclusionValue(occlusionValue)
 
 
-        config.setCheckFaceQuality(checkFaceQuality ?: false)
-
-        config.setFaceDecodeNumberOfThreads(faceDecodeNumberOfThreads ?: 2)
+//        config.setCheckFaceQuality(checkFaceQuality ?: false)
+//
+//        config.setFaceDecodeNumberOfThreads(faceDecodeNumberOfThreads ?: 2)
 
         FaceSDKManager.getInstance().faceConfig = config
     }
@@ -136,7 +146,7 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
             }
         })
 
-        val intent = Intent(activity, BdFaceLivenessActivity::class.java)
+        val intent = Intent(activity, FaceLivenessExpActivity::class.java)
         activity.startActivityForResult(intent, FACE_LIVENESS_REQUEST_CODE)
     }
 
@@ -153,7 +163,7 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
 
         setFaceConfig(activity, actionNum)
 
-        val intent = Intent(activity, BdFaceLivenessActivity::class.java)
+        val intent = Intent(activity, FaceLivenessExpActivity::class.java)
         activity.startActivityForResult(intent, FACE_LIVENESS_REQUEST_CODE)
     }
 
@@ -196,22 +206,22 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
 
     /*人脸识别初始化参数设置*/
     private fun setFaceConfig(activity: Activity, actionNum: Int) {
-        FaceSDKManager.getInstance().initialize(activity, "pharmacist-license-face-android", "idl-license.face-android")
+//        FaceSDKManager.getInstance().initialize(activity, "pharmacist-license-face-android", "idl-license.face-android")
         val config = FaceSDKManager.getInstance().faceConfig
         // SDK初始化已经设置完默认参数（推荐参数），您也根据实际需求进行数值调整
         config.setLivenessTypeList(getRandomActions(actionNum))
         config.setLivenessRandom(isLivenessRandom)
         config.setBlurnessValue(FaceEnvironment.VALUE_BLURNESS)
         config.setBrightnessValue(FaceEnvironment.VALUE_BRIGHTNESS)
-        config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
+//        config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
         config.setHeadPitchValue(FaceEnvironment.VALUE_HEAD_PITCH)
         config.setHeadRollValue(FaceEnvironment.VALUE_HEAD_ROLL)
         config.setHeadYawValue(FaceEnvironment.VALUE_HEAD_YAW)
         config.setMinFaceSize(FaceEnvironment.VALUE_MIN_FACE_SIZE)
         config.setNotFaceValue(FaceEnvironment.VALUE_NOT_FACE_THRESHOLD)
         config.setOcclusionValue(FaceEnvironment.VALUE_OCCLUSION)
-        config.setCheckFaceQuality(true)
-        config.setFaceDecodeNumberOfThreads(2)
+//        config.setCheckFaceQuality(true)
+//        config.setFaceDecodeNumberOfThreads(2)
 
         FaceSDKManager.getInstance().faceConfig = config
     }

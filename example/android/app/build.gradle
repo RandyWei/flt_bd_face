@@ -48,7 +48,7 @@ android {
     defaultConfig {
 //        applicationId "dev.bughub.plugin.fltbdface_example"
         applicationId "com.chinahrt.app.pharmacist"
-        minSdkVersion 16
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
