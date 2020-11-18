@@ -43,9 +43,8 @@ public class FaceLivenessExpActivity extends FaceLivenessActivity implements
 //                    CollectionSuccessExpActivity.class);
 //            intent.putExtra("destroyType", "FaceLivenessExpActivity");
 //            startActivity(intent);
-
+            IntentUtils.getInstance().setBitmap(mBmpStr);
             Intent intent = new Intent();
-            intent.putExtra("data", mBmpStr);
             setResult(0, intent);
             finish();
 

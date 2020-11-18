@@ -22,116 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="添加人脸配置代码">
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/CollectionSuccessExpActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceLivenessExpActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/widget/DefaultDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/widget/TimeoutDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_round_btn_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_round_btn_item_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_round_input_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_round_time_out.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/dialog_time_out.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/widget_face_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xxhdpi/icon_overtime.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/xml/network_security_config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/android/app/src/main/assets/idl-license.face-android" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="更新百度人脸SDK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/libs/FaceSDK.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/libs/ast.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/libs/baidu_license.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/assets/align_model.binary" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/assets/blur.binary" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/assets/facedetect.binary" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/assets/occlu.binary" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/assets/score.binary" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/FaceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/FaceEnvironment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/FaceSDKManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/FaceStatusEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/IDetect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/IDetectStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/IDetectStrategyCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ILiveness.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ILivenessStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ILivenessStrategyCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/LicenseStatusEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/LivenessTypeEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/common/ConstantHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/common/LogHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/common/SharedPrefHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/common/SoundPoolHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/decode/FaceModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/model/FaceExtInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/model/FaceModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/network/BaseRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/network/LogRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/network/NoMotionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/DetectStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/FaceDetectStrategyExtModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/FaceDetectStrategyModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/FaceLivenessStrategyExtModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/FaceLivenessStrategyModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/FaceStrategyModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/LivenessStatusStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/strategy/LivenessStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/FaceDetectActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/FaceDetectActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/FaceLivenessActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/FaceLivenessActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/FaceSDKResSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/FaceSDKResSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/utils/CameraUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/utils/CameraUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/utils/VolumeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/utils/VolumeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/widget/FaceDetectRoundView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/ui/widget/FaceDetectRoundView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/APIUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/Base64Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/BitmapUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/CameraPreviewUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/DensityUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/DeviceUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/EncodeUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/FileUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/ImageExif.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/IoUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/MD5Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/baidu/idl/face/platform/utils/SoundPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/arm64-v8a/libFaceSDK.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/arm64-v8a/libbaidu_license.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/armeabi-v7a/libFaceSDK.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/armeabi-v7a/libbaidu_license.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/x86/libFaceSDK.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/x86/libbaidu_license.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/FltbdfacePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/FltbdfacePlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/BdFaceLivenessActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/BdFaceLivenessActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/bg_tips.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_tips.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/bg_tips_no.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/bg_tips_no.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_face_detect.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_face_detect_v3100.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_face_detect_v3100.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_face_liveness.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_face_liveness_v3100.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_face_liveness_v3100.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/bg_face_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/ic_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/ic_disable_sound.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/ic_enable_sound.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xxhdpi/ic_close_ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xxhdpi/ic_disable_sound_ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/mipmap-xxhdpi/ic_enable_sound_ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/detect_face_in.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/detect_face_in.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_eye.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_eye.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_down.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_down.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_left.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_left.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_left_right.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_left_right.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_right.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_right.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_up.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_head_up.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/raw/liveness_mouth.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/raw/liveness_mouth.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceLivenessExpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceLivenessExpActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587439221364</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="更新百度人脸SDK">
+      <created>1605664146177</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605664146177</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,28 +198,33 @@
     <MESSAGE value="编写readme" />
     <MESSAGE value="build配置" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="更新百度人脸SDK" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新百度人脸SDK" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="619" key="GridCell.Tab.0.bottom" timestamp="1605573761281">
-      <screen x="0" y="23" width="1920" height="1000" />
+    <state width="1878" height="609" key="GridCell.Tab.0.bottom" timestamp="1605666753813">
+      <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.bottom/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761281" />
     <state width="1878" height="620" key="GridCell.Tab.0.bottom/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102878" />
-    <state width="1878" height="619" key="GridCell.Tab.0.center" timestamp="1605573761280">
-      <screen x="0" y="23" width="1920" height="1000" />
+    <state width="1878" height="609" key="GridCell.Tab.0.bottom/0.25.1920.992@0.25.1920.992" timestamp="1605666753813" />
+    <state width="1878" height="609" key="GridCell.Tab.0.center" timestamp="1605666753812">
+      <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.center/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761280" />
     <state width="1878" height="620" key="GridCell.Tab.0.center/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102877" />
-    <state width="1878" height="619" key="GridCell.Tab.0.left" timestamp="1605573761280">
-      <screen x="0" y="23" width="1920" height="1000" />
+    <state width="1878" height="609" key="GridCell.Tab.0.center/0.25.1920.992@0.25.1920.992" timestamp="1605666753812" />
+    <state width="1878" height="609" key="GridCell.Tab.0.left" timestamp="1605666753812">
+      <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.left/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761280" />
     <state width="1878" height="620" key="GridCell.Tab.0.left/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102877" />
-    <state width="1878" height="619" key="GridCell.Tab.0.right" timestamp="1605573761280">
-      <screen x="0" y="23" width="1920" height="1000" />
+    <state width="1878" height="609" key="GridCell.Tab.0.left/0.25.1920.992@0.25.1920.992" timestamp="1605666753812" />
+    <state width="1878" height="609" key="GridCell.Tab.0.right" timestamp="1605666753812">
+      <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.right/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761280" />
     <state width="1878" height="620" key="GridCell.Tab.0.right/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102877" />
+    <state width="1878" height="609" key="GridCell.Tab.0.right/0.25.1920.992@0.25.1920.992" timestamp="1605666753812" />
   </component>
 </project>

@@ -9,6 +9,7 @@ import com.baidu.idl.face.platform.FaceEnvironment
 import com.baidu.idl.face.platform.FaceSDKManager
 import com.baidu.idl.face.platform.LivenessTypeEnum
 import com.baidu.idl.face.platform.listener.IInitCallback
+import com.baidu.idl.face.platform.ui.utils.IntentUtils
 import com.chinahrt.app.pharmacist.QueuingEventSink
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.EventChannel
@@ -229,14 +230,14 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
         if (requestCode == FACE_LIVENESS_REQUEST_CODE) {
-            return if (null == data) {
+            val imgData = IntentUtils.getInstance().bitmap
+            return if (null == imgData) {
                 eventSink.error("10010", "采集失败", "采集失败")
                 Log.i("===", "采集失败")
                 true
             } else {
-                val dataStr = data.getStringExtra("data")
-                eventSink.success(dataStr)
-                Log.i("===", dataStr)
+                eventSink.success(imgData)
+                Log.i("===", imgData)
                 true
             }
         }
