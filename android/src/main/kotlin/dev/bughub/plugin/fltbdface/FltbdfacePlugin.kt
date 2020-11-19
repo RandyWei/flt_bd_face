@@ -102,7 +102,7 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                 result.success(null)
             }
             "startFaceLiveness" -> {
-                flutterBinding?.binaryMessenger?.let { delegate?.startFaceLiveness(it) }
+                delegate?.startFaceLiveness()
                 result.success(null)
             }
         }
@@ -125,7 +125,7 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
             activityBinding: ActivityPluginBinding?) {
         this.activity = activity
         this.application = application
-        delegate = FaceDelegate(activity)
+        delegate = FaceDelegate(activity, flutterBinding?.binaryMessenger)
         channel = MethodChannel(messenger, CHANNEL)
         channel?.setMethodCallHandler(this)
         if (registrar != null) { // V1 embedding setup for activity listeners.

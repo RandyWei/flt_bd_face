@@ -34,6 +34,6 @@ class FaceService {
     //设置配置
     _facePlugin.setFaceConfig(_faceConfig);
     //启动人脸采集界面
-    _facePlugin.startFaceLiveness(data: data, onFailed: onFailed);
+   _facePlugin.startFaceLiveness(data: data, onFailed: onFailed);
   }
 }

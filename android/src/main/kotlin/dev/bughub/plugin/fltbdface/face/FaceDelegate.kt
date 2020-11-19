@@ -15,48 +15,45 @@ import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.PluginRegistry
 import java.util.*
+import kotlin.collections.HashMap
 
 
-class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
+class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?) : PluginRegistry.ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
 
     val REQUEST_CAMERA_VIDEO_PERMISSION = 2355
     val FACE_LIVENESS_REQUEST_CODE = 123
-    var permissionManager: PermissionManager? = null
     private val eventSink = QueuingEventSink()
-
-
-//    init {
-//        permissionManager = object: PermissionManager{
-//            override fun isPermissionGranted(permissionName: String?): Boolean {
-//                return permissionName?.let { ActivityCompat.checkSelfPermission(activity, it) } == PackageManager.PERMISSION_GRANTED
-//            }
-//
-//            override fun askForPermission(permissionName: String?, requestCode: Int) {
-//                ActivityCompat.requestPermissions(activity, arrayOf(permissionName!!), requestCode)
-//            }
-//
-//            override fun needRequestCameraPermission(): Boolean {
-//                val greatOrEqualM = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-//                return greatOrEqualM && isPermissionPresentInManifest(activity, Manifest.permission.CAMERA)
-//            }
-//
-//        }
-//    }
-
-//    private fun needRequestCameraPermission(): Boolean {
-//        return if (permissionManager == null) {
-//            false
-//        } else permissionManager!!.needRequestCameraPermission()
-//    }
+    private val initEventSink = QueuingEventSink()
 
     fun initialize(licenseId: String, licenseFileName: String) {
-        FaceSDKManager.getInstance().initialize(activity, licenseId, licenseFileName,object :IInitCallback{
+
+        EventChannel(binaryMessenger, "plugin.bughub.dev/event:init").setStreamHandler(object : EventChannel.StreamHandler {
+            override fun onListen(o: Any?, sink: EventChannel.EventSink?) {
+                // 把eventSink存起来
+                initEventSink.setDelegate(sink)
+            }
+
+            override fun onCancel(o: Any?) {
+                initEventSink.setDelegate(null)
+            }
+        })
+
+        FaceSDKManager.getInstance().initialize(activity, licenseId, licenseFileName, object : IInitCallback {
             override fun initSuccess() {
-                Log.i("FaceDelegate","初始化成功")
+                Log.i("FaceDelegate", "初始化成功")
+                activity.runOnUiThread {
+                    val map = HashMap<String, Any>()
+                    map["status"] = 0
+                    map["message"] = "成功"
+                    initEventSink.success(map)
+                }
             }
 
             override fun initFailure(status: Int, message: String?) {
-                Log.e("FaceDelegate","$status  -----   $message")
+                Log.e("FaceDelegate", "$status  -----   $message")
+                activity.runOnUiThread {
+                    initEventSink.error("$status", "$message", "")
+                }
             }
 
         })
@@ -134,9 +131,9 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
         FaceSDKManager.getInstance().faceConfig = config
     }
 
-    fun startFaceLiveness(messenger: BinaryMessenger) {
+    fun startFaceLiveness() {
 
-        EventChannel(messenger, "plugin.bughub.dev/event").setStreamHandler(object : EventChannel.StreamHandler {
+        EventChannel(binaryMessenger, "plugin.bughub.dev/event").setStreamHandler(object : EventChannel.StreamHandler {
             override fun onListen(o: Any?, sink: EventChannel.EventSink?) {
                 // 把eventSink存起来
                 eventSink.setDelegate(sink)
@@ -210,17 +207,17 @@ class FaceDelegate(var activity: Activity) : PluginRegistry.ActivityResultListen
 //        FaceSDKManager.getInstance().initialize(activity, "pharmacist-license-face-android", "idl-license.face-android")
         val config = FaceSDKManager.getInstance().faceConfig
         // SDK初始化已经设置完默认参数（推荐参数），您也根据实际需求进行数值调整
-        config.setLivenessTypeList(getRandomActions(actionNum))
-        config.setLivenessRandom(isLivenessRandom)
-        config.setBlurnessValue(FaceEnvironment.VALUE_BLURNESS)
-        config.setBrightnessValue(FaceEnvironment.VALUE_BRIGHTNESS)
+        config.livenessTypeList = getRandomActions(actionNum)
+        config.isLivenessRandom = isLivenessRandom
+        config.blurnessValue = FaceEnvironment.VALUE_BLURNESS
+        config.brightnessValue = FaceEnvironment.VALUE_BRIGHTNESS
 //        config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
-        config.setHeadPitchValue(FaceEnvironment.VALUE_HEAD_PITCH)
-        config.setHeadRollValue(FaceEnvironment.VALUE_HEAD_ROLL)
-        config.setHeadYawValue(FaceEnvironment.VALUE_HEAD_YAW)
-        config.setMinFaceSize(FaceEnvironment.VALUE_MIN_FACE_SIZE)
-        config.setNotFaceValue(FaceEnvironment.VALUE_NOT_FACE_THRESHOLD)
-        config.setOcclusionValue(FaceEnvironment.VALUE_OCCLUSION)
+        config.headPitchValue = FaceEnvironment.VALUE_HEAD_PITCH
+        config.headRollValue = FaceEnvironment.VALUE_HEAD_ROLL
+        config.headYawValue = FaceEnvironment.VALUE_HEAD_YAW
+        config.minFaceSize = FaceEnvironment.VALUE_MIN_FACE_SIZE
+        config.notFaceValue = FaceEnvironment.VALUE_NOT_FACE_THRESHOLD
+        config.occlusionValue = FaceEnvironment.VALUE_OCCLUSION
 //        config.setCheckFaceQuality(true)
 //        config.setFaceDecodeNumberOfThreads(2)
 
