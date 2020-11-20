@@ -205,22 +205,6 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
         activity.startActivityForResult(intent, FACE_LIVENESS_REQUEST_CODE)
     }
 
-    fun start(actionNum: Int) {
-//        permissionManager?.let {
-//            if (needRequestCameraPermission()
-//                    && !it.isPermissionGranted(Manifest.permission.CAMERA)) {
-//                it.askForPermission(
-//                        Manifest.permission.CAMERA, REQUEST_CAMERA_VIDEO_PERMISSION)
-//                return
-//            }
-//        }
-
-
-        setFaceConfig(activity, actionNum)
-
-        val intent = Intent(activity, FaceLivenessExpActivity::class.java)
-        activity.startActivityForResult(intent, FACE_LIVENESS_REQUEST_CODE)
-    }
 
     var livenessList = arrayListOf<LivenessTypeEnum>()
     var isLivenessRandom = false
@@ -257,30 +241,6 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
         }
         return list
     }
-
-
-    /*人脸识别初始化参数设置*/
-    private fun setFaceConfig(activity: Activity, actionNum: Int) {
-//        FaceSDKManager.getInstance().initialize(activity, "pharmacist-license-face-android", "idl-license.face-android")
-        val config = FaceSDKManager.getInstance().faceConfig
-        // SDK初始化已经设置完默认参数（推荐参数），您也根据实际需求进行数值调整
-        config.livenessTypeList = getRandomActions(actionNum)
-        config.isLivenessRandom = isLivenessRandom
-        config.blurnessValue = FaceEnvironment.VALUE_BLURNESS
-        config.brightnessValue = FaceEnvironment.VALUE_BRIGHTNESS
-//        config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
-        config.headPitchValue = FaceEnvironment.VALUE_HEAD_PITCH
-        config.headRollValue = FaceEnvironment.VALUE_HEAD_ROLL
-        config.headYawValue = FaceEnvironment.VALUE_HEAD_YAW
-        config.minFaceSize = FaceEnvironment.VALUE_MIN_FACE_SIZE
-        config.notFaceValue = FaceEnvironment.VALUE_NOT_FACE_THRESHOLD
-        config.occlusionValue = FaceEnvironment.VALUE_OCCLUSION
-//        config.setCheckFaceQuality(true)
-//        config.setFaceDecodeNumberOfThreads(2)
-
-        FaceSDKManager.getInstance().faceConfig = config
-    }
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
         if (requestCode == FACE_LIVENESS_REQUEST_CODE) {

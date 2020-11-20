@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="优化初始化回调">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/FltbdfacePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/FltbdfacePlugin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/face/face_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/face/face_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/face/face_environment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/face/face_environment.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
