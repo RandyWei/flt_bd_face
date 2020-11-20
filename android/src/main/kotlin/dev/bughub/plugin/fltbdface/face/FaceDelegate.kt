@@ -59,12 +59,32 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
         })
     }
 
-    fun setFaceConfig(livenessTypeList: List<Int>, livenessRandom: Boolean = false, blurnessValue: Float?,
-                      brightnessValue: Float?, cropFaceValue: Int?,
-                      headPitchValue: Int?, headRollValue: Int?,
-                      headYawValue: Int?, minFaceSize: Int?,
-                      notFaceValue: Float?, occlusionValue: Float?,
-                      checkFaceQuality: Boolean?, faceDecodeNumberOfThreads: Int?, livenessRandomCount: Int?) {
+
+    /**
+     * 设置人脸配置
+     *
+     * @param livenessTypeList 活动动作列表
+     * @param livenessRandom 活动动作是否随机
+     * @param blurnessValue 设置模糊度阈值
+     * @param brightnessValue 设置光照阈值（范围0-255）
+     * @param headPitchValue 设置人脸姿态角阈值
+     * @param headRollValue
+     * @param headYawValue 设置人脸姿态角阈值
+     * @param minFaceSize 设置可检测的最小人脸阈值
+     * @param notFaceValue 设置可检测到人脸的阈值
+     * @param occlusionValue 设置遮挡阈值
+     * @param livenessRandomCount
+     * @param eyeClosedValue 设置闭眼阈值
+     * @param cacheImageNum 设置图片缓存数量
+     * @param isOpenSound 设置开启提示音
+     * @param scale 原图缩放系数
+     * @param cropHeight 抠图高的设定，为了保证好的抠图效果，我们要求高宽比是4：3，所以会在内部进行计算，只需要传入高即可
+     * @param secType 加密类型，0：Base64加密，上传时image_sec传false；1：百度加密文件加密，上传时image_sec传true
+     */
+    fun setFaceConfig(livenessTypeList: List<Int>, livenessRandom: Boolean = false, blurnessValue: Float?, brightnessValue: Float?,
+                      headPitchValue: Int?, headRollValue: Int?, headYawValue: Int?, minFaceSize: Int?, notFaceValue: Float?,
+                      occlusionValue: Float?, livenessRandomCount: Int?, eyeClosedValue: Float?, cacheImageNum: Int?, isOpenSound: Boolean = true,
+                      scale: Float?, cropHeight: Int?, secType: Int?) {
         val config = FaceSDKManager.getInstance().faceConfig
         // SDK初始化已经设置完默认参数（推荐参数），您也根据实际需求进行数值调整
         val livenessList = arrayListOf<LivenessTypeEnum>()
@@ -72,61 +92,98 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
             livenessList.add(LivenessTypeEnum.values()[it])
         }
 
-        config.setLivenessTypeList(livenessList)
+        // 设置活体动作，通过设置list，LivenessTypeEunm.Eye, LivenessTypeEunm.Mouth,
+        // LivenessTypeEunm.HeadUp, LivenessTypeEunm.HeadDown, LivenessTypeEunm.HeadLeft,
+        // LivenessTypeEunm.HeadRight, LivenessTypeEunm.HeadLeftOrRight
+        config.livenessTypeList = livenessList
+        // 设置动作活体是否随机
+        config.isLivenessRandom = livenessRandom
 
-        config.setLivenessRandom(livenessRandom)
+        config.livenessRandomCount = livenessRandomCount ?: 0
 
-        config.setLivenessRandomCount(livenessRandomCount ?: 0)
+        // 设置可检测的最小人脸阈值
+        if (null == minFaceSize)
+            config.minFaceSize = FaceEnvironment.VALUE_MIN_FACE_SIZE
+        else
+            config.minFaceSize = minFaceSize
 
+        // 设置可检测到人脸的阈值
+        if (null == notFaceValue)
+            config.notFaceValue = FaceEnvironment.VALUE_NOT_FACE_THRESHOLD
+        else
+            config.notFaceValue = notFaceValue
+
+        // 设置模糊度阈值
         if (null == blurnessValue)
-            config.setBlurnessValue(FaceEnvironment.VALUE_BLURNESS)
+            config.blurnessValue = FaceEnvironment.VALUE_BLURNESS
         else
-            config.setBlurnessValue(blurnessValue)
+            config.blurnessValue = blurnessValue
 
+        // 设置光照阈值（范围0-255）
         if (null == brightnessValue)
-            config.setBrightnessValue(FaceEnvironment.VALUE_BRIGHTNESS)
+            config.brightnessValue = FaceEnvironment.VALUE_BRIGHTNESS
         else
-            config.setBrightnessValue(brightnessValue)
+            config.brightnessValue = brightnessValue
 
-//        if (null == cropFaceValue)
-//            config.setCropFaceValue(FaceEnvironment.VALUE_CROP_FACE_SIZE)
-//        else
-//            config.setCropFaceValue(cropFaceValue)
+        // 设置遮挡阈值
+        if (null == occlusionValue)
+            config.occlusionValue = FaceEnvironment.VALUE_OCCLUSION
+        else
+            config.occlusionValue = occlusionValue
 
+        // 设置人脸姿态角阈值
         if (null == headPitchValue)
-            config.setHeadPitchValue(FaceEnvironment.VALUE_HEAD_PITCH)
+            config.headPitchValue = FaceEnvironment.VALUE_HEAD_PITCH
         else
-            config.setHeadPitchValue(headPitchValue)
+            config.headPitchValue = headPitchValue
+        if (null == headYawValue)
+            config.headYawValue = FaceEnvironment.VALUE_HEAD_YAW
+        else
+            config.headYawValue = headYawValue
+
+        // 设置闭眼阈值
+        if (eyeClosedValue == null) {
+            config.eyeClosedValue = FaceEnvironment.VALUE_CLOSE_EYES
+        } else {
+            config.eyeClosedValue = eyeClosedValue
+        }
+
+        // 设置图片缓存数量
+        if (cacheImageNum == null) {
+            config.cacheImageNum = FaceEnvironment.VALUE_CACHE_IMAGE_NUM
+        } else {
+            config.cacheImageNum = cacheImageNum
+        }
+
+        // 设置开启提示音
+        config.isSound = isOpenSound
+
+        // 原图缩放系数
+        if (scale == null) {
+            config.scale = FaceEnvironment.VALUE_SCALE
+        } else {
+            config.scale = scale
+        }
+
+        // 抠图高的设定，为了保证好的抠图效果，我们要求高宽比是4：3，所以会在内部进行计算，只需要传入高即可
+        if (cropHeight == null) {
+            config.cropHeight = FaceEnvironment.VALUE_CROP_HEIGHT
+        } else {
+            config.cropHeight = cropHeight
+        }
+
+        // 加密类型，0：Base64加密，上传时image_sec传false；1：百度加密文件加密，上传时image_sec传true
+        if (secType == null) {
+            config.secType = FaceEnvironment.VALUE_SEC_TYPE;
+        } else {
+            config.secType = secType
+        }
 
         if (null == headRollValue)
-            config.setHeadRollValue(FaceEnvironment.VALUE_HEAD_ROLL)
+            config.headRollValue = FaceEnvironment.VALUE_HEAD_ROLL
         else
-            config.setHeadRollValue(headRollValue)
+            config.headRollValue = headRollValue
 
-        if (null == headYawValue)
-            config.setHeadYawValue(FaceEnvironment.VALUE_HEAD_YAW)
-        else
-            config.setHeadYawValue(headYawValue)
-
-        if (null == minFaceSize)
-            config.setMinFaceSize(FaceEnvironment.VALUE_MIN_FACE_SIZE)
-        else
-            config.setMinFaceSize(minFaceSize)
-
-        if (null == notFaceValue)
-            config.setNotFaceValue(FaceEnvironment.VALUE_NOT_FACE_THRESHOLD)
-        else
-            config.setNotFaceValue(notFaceValue)
-
-        if (null == occlusionValue)
-            config.setOcclusionValue(FaceEnvironment.VALUE_OCCLUSION)
-        else
-            config.setOcclusionValue(occlusionValue)
-
-
-//        config.setCheckFaceQuality(checkFaceQuality ?: false)
-//
-//        config.setFaceDecodeNumberOfThreads(faceDecodeNumberOfThreads ?: 2)
 
         FaceSDKManager.getInstance().faceConfig = config
     }

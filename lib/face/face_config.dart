@@ -20,8 +20,8 @@ class FaceConfig {
   /// 图像中人脸偏头阀值
   var headRollValue = FaceEnvironment.VALUE_HEAD_ROLL;
 
-  /// 裁剪图像中人脸时的大小
-  var cropFaceValue = FaceEnvironment.VALUE_CROP_FACE_SIZE;
+  /// 抠图高的设定，为了保证好的抠图效果，我们要求高宽比是4：3，所以会在内部进行计算，只需要传入高即可
+  var cropHeight = FaceEnvironment.VALUE_CROP_HEIGHT;
 
   /// 图像能被检测出人脸的最小人脸值
   var minFaceSize = FaceEnvironment.VALUE_MIN_FACE_SIZE;
@@ -29,26 +29,26 @@ class FaceConfig {
   /// 图像能被检测出人脸阀值
   var notFaceValue = FaceEnvironment.VALUE_NOT_FACE_THRESHOLD;
 
-  /// 人脸采集图片数量阀值
-  var maxCropImageNum = FaceEnvironment.VALUE_MAX_CROP_IMAGE_NUM;
-
-  /// 是否进行人脸图片质量检测
-  var isCheckFaceQuality = FaceEnvironment.VALUE_IS_CHECK_QUALITY;
-
   /// 是否开启提示音
   var isSound = true;
-
-  /// 是否进行检测
-  var sVerifyLive = true;
-
-  /// 人脸检测时开启的进程数，建议为CPU核数
-  var faceDecodeNumberOfThreads = 0;
 
   /// 是否随机活体检测动作
   var isLivenessRandom = false;
 
   /// 随机活体检测动作数
   var livenessRandomCount = FaceEnvironment.VALUE_LIVENESS_DEFAULT_RANDOM_COUNT;
+
+  /// 闭眼阈值
+  var eyeClosedValue = FaceEnvironment.VALUE_CLOSE_EYES;
+
+  /// 图片缓存数量
+  var cacheImageNum = FaceEnvironment.VALUE_CACHE_IMAGE_NUM;
+
+  /// 原图缩放系数
+  var scale = FaceEnvironment.VALUE_SCALE;
+
+  /// 加密类型，0：Base64加密，上传时image_sec传false；1：百度加密文件加密，上传时image_sec传true
+  var secType = FaceEnvironment.VALUE_SEC_TYPE;
 
   /// 活体检测的动作类型列表
   List<LivenessType> livenessTypeList = [
@@ -68,17 +68,18 @@ class FaceConfig {
       'headPitchValue': this.headPitchValue,
       'headYawValue': this.headYawValue,
       'headRollValue': this.headRollValue,
-      'cropFaceValue': this.cropFaceValue,
+      'cropHeight': this.cropHeight,
       'minFaceSize': this.minFaceSize,
       'notFaceValue': this.notFaceValue,
-      'maxCropImageNum': this.maxCropImageNum,
-      'isCheckFaceQuality': this.isCheckFaceQuality,
       'isSound': this.isSound,
-      'sVerifyLive': this.sVerifyLive,
-      'faceDecodeNumberOfThreads': this.faceDecodeNumberOfThreads,
       'isLivenessRandom': this.isLivenessRandom,
       'livenessRandomCount': this.livenessRandomCount,
-      'livenessTypeList': this.livenessTypeList.map((item) => item.index).toList(),
+      'livenessTypeList':
+          this.livenessTypeList.map((item) => item.index).toList(),
+      'eyeClosedValue': this.eyeClosedValue,
+      'cacheImageNum': this.cacheImageNum,
+      'scale': this.scale,
+      'secType': this.secType
     };
   }
 }

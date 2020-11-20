@@ -82,7 +82,7 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
                 val brightnessValue: Float? = call.argument<Double>("brightnessValue")?.toFloat()
 
-                val cropFaceValue: Int? = call.argument<Int>("cropFaceValue")
+                val cropHeight: Int? = call.argument<Int>("cropHeight")
 
                 val headPitchValue: Int? = call.argument<Int>("headPitchValue")
                 val headRollValue: Int? = call.argument<Int>("headRollValue")
@@ -90,14 +90,18 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                 val minFaceSize: Int? = call.argument<Int>("minFaceSize")
                 val notFaceValue: Float? = call.argument<Double>("notFaceValue")?.toFloat()
                 val occlusionValue: Float? = call.argument<Double>("occlusionValue")?.toFloat()
-                val checkFaceQuality: Boolean? = call.argument<Boolean>("checkFaceQuality")
-                val faceDecodeNumberOfThreads: Int? = call.argument<Int>("faceDecodeNumberOfThreads")
+                val scale: Float? = call.argument<Double>("scale")?.toFloat()
+                val eyeClosedValue: Float? = call.argument<Float>("eyeClosedValue")
+                val isOpenSound: Boolean = call.argument<Boolean>("isSound") ?: true
+                val cacheImageNum: Int? = call.argument<Int>("cacheImageNum")
                 val livenessRandomCount: Int? = call.argument<Int>("livenessRandomCount")
+                val secType: Int? = call.argument<Int>("secType")
 
 
                 delegate?.setFaceConfig(livenessTypeList, livenessRandom = livenessRandom, blurnessValue = blurnessValue, brightnessValue = brightnessValue,
-                        cropFaceValue = cropFaceValue, headPitchValue = headPitchValue, headRollValue = headRollValue, headYawValue = headYawValue, minFaceSize = minFaceSize,
-                        notFaceValue = notFaceValue, occlusionValue = occlusionValue, checkFaceQuality = checkFaceQuality, faceDecodeNumberOfThreads = faceDecodeNumberOfThreads, livenessRandomCount = livenessRandomCount)
+                        headPitchValue = headPitchValue, headYawValue = headYawValue, headRollValue = headRollValue, minFaceSize = minFaceSize, notFaceValue = notFaceValue,
+                        occlusionValue = occlusionValue, livenessRandomCount = livenessRandomCount, eyeClosedValue = eyeClosedValue, cacheImageNum = cacheImageNum,
+                        isOpenSound = isOpenSound, scale = scale, cropHeight = cropHeight, secType = secType)
 
                 result.success(null)
             }
