@@ -23,36 +23,37 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
     val REQUEST_CAMERA_VIDEO_PERMISSION = 2355
     val FACE_LIVENESS_REQUEST_CODE = 123
     private val eventSink = QueuingEventSink()
-    private val initEventSink = QueuingEventSink()
 
     fun initialize(licenseId: String, licenseFileName: String) {
 
-        EventChannel(binaryMessenger, "plugin.bughub.dev/event:init").setStreamHandler(object : EventChannel.StreamHandler {
+        EventChannel(binaryMessenger, "plugin.bughub.dev/event").setStreamHandler(object : EventChannel.StreamHandler {
             override fun onListen(o: Any?, sink: EventChannel.EventSink?) {
                 // 把eventSink存起来
-                initEventSink.setDelegate(sink)
+                eventSink.setDelegate(sink)
             }
 
             override fun onCancel(o: Any?) {
-                initEventSink.setDelegate(null)
+                eventSink.setDelegate(null)
             }
         })
+
 
         FaceSDKManager.getInstance().initialize(activity, licenseId, licenseFileName, object : IInitCallback {
             override fun initSuccess() {
                 Log.i("FaceDelegate", "初始化成功")
                 activity.runOnUiThread {
                     val map = HashMap<String, Any>()
+                    map["event"] = "initialize"
                     map["status"] = 0
                     map["message"] = "成功"
-                    initEventSink.success(map)
+                    eventSink.success(map)
                 }
             }
 
             override fun initFailure(status: Int, message: String?) {
                 Log.e("FaceDelegate", "$status  -----   $message")
                 activity.runOnUiThread {
-                    initEventSink.error("$status", "$message", "")
+                    eventSink.error("$status", "$message", "")
                 }
             }
 
@@ -189,18 +190,6 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
     }
 
     fun startFaceLiveness() {
-
-        EventChannel(binaryMessenger, "plugin.bughub.dev/event").setStreamHandler(object : EventChannel.StreamHandler {
-            override fun onListen(o: Any?, sink: EventChannel.EventSink?) {
-                // 把eventSink存起来
-                eventSink.setDelegate(sink)
-            }
-
-            override fun onCancel(o: Any?) {
-                eventSink.setDelegate(null)
-            }
-        })
-
         val intent = Intent(activity, FaceLivenessExpActivity::class.java)
         activity.startActivityForResult(intent, FACE_LIVENESS_REQUEST_CODE)
     }
@@ -250,6 +239,10 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
                 Log.i("===", "采集失败")
                 true
             } else {
+                val map = HashMap<String, Any>()
+                map["event"] = "startFaceLiveness"
+                map["status"] = 0
+                map["data"] = imgData
                 eventSink.success(imgData)
                 Log.i("===", imgData)
                 true
