@@ -9,8 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreGraphics/CoreGraphics.h>
+@class FaceInfo;
+@class FaceLivenessState;
 
 #define TIME_THRESHOLD_FOR_ANOTHER_SESSION 2.0
+
+typedef NS_ENUM(NSInteger, LivenessActionType) {
+    LivenessActionTypeLiveEye = 0,
+    LivenessActionTypeLiveMouth = 1,
+    LivenessActionTypeLiveYawRight = 2,
+    LivenessActionTypeLiveYawLeft = 3,
+    LivenessActionTypeLivePitchUp = 4,
+    LivenessActionTypeLivePitchDown = 5,
+    LivenessActionTypeLiveYaw = 6,
+    LivenessActionTypeNoAction = 7,
+};
 
 typedef NS_ENUM(NSUInteger, LivenessRemindCode) {
     LivenessRemindCodeOK = 0,   //成功
@@ -50,22 +63,49 @@ typedef NS_ENUM(NSUInteger, LivenessRemindCode) {
     LivenessRemindCodeVerifyLocalFileError,
     LivenessRemindCodeVerifyRemoteDataError,
     LivenessRemindCodeTimeout,  //超时
-    LivenessRemindCodeConditionMeet
+    LivenessRemindCodeConditionMeet,
+    LivenessRemindActionCodeTimeout, // 当前活体动作超时
+    LivenessRemindCodeFaceIdChanged    // faceid 发生变化
 };
 
-typedef void (^LivenessStrategyCompletion) (NSDictionary * images, LivenessRemindCode remindCode);
+typedef void (^LivenessStrategyCompletion) (NSDictionary * images, FaceInfo *faceInfo, LivenessRemindCode remindCode);
+typedef void (^LivenessNormalCompletion) (NSDictionary * images, FaceInfo *faceInfo, LivenessRemindCode remindCode);
+
+/**
+ * 活体检测过程中，返回活体总数，当前成功个数，当前活体类型
+ */
+typedef void (^LivenessProcess) (float numberOfLiveness, float numberOfSuccess, LivenessActionType currenActionType);
+
 
 @interface IDLFaceLivenessManager : NSObject
 @property (nonatomic, assign) BOOL enableSound;
 
 + (instancetype)sharedInstance;
 
-- (void)livenessStratrgyWithImage:(UIImage *)image previewRect:(CGRect)previewRect detectRect:(CGRect)detectRect completionHandler:(LivenessStrategyCompletion)completion;
+/**
+ *  人脸活体验证，成功之后返回扣图图片，原始图片
+ * @param image 镜头拿到的图片
+ * @param previewRect 预览的Rect
+ * @param detectRect 检测的Rect
+ * return completion 回调信息
+ */
+-(void) livenessNormalWithImage:(UIImage *)image previewRect:(CGRect)previewRect detectRect:(CGRect)detectRect completionHandler:(LivenessNormalCompletion)completion;
+
+/**
+ * 活体检测过程中，返回活体总数，当前成功个数，当前活体类型
+ */
+-(void) livenessProcessHandler:(LivenessProcess) process;
 
 - (void)reset;
 
 -(void)startInitial;
 
+/**
+ * 返回无黑边的方法
+ * @param array 活体动作数组
+ * @param order 是否顺序执行
+ * @param numberOfLiveness 活体动作个数
+ */
 - (void)livenesswithList:(NSArray *)array order:(BOOL)order numberOfLiveness:(NSInteger)numberOfLiveness;
 
 @end

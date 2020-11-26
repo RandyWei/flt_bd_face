@@ -15,22 +15,8 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		B615375A244E7DB8001D1061 /* idl-license.face-ios in Resources */ = {isa = PBXBuildFile; fileRef = B6153759244E7DB7001D1061 /* idl-license.face-ios */; };
-		B61537A6244E8D2F001D1061 /* com.baidu.idl.face.faceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B61537A4244E8D2F001D1061 /* com.baidu.idl.face.faceSDK.bundle */; };
-		B61537A7244E8D2F001D1061 /* com.baidu.idl.face.model.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B61537A5244E8D2F001D1061 /* com.baidu.idl.face.model.bundle */; };
+		B6880168256DF9D9008BEA2B /* com.baidu.idl.face.model.faceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B6880167256DF9D9008BEA2B /* com.baidu.idl.face.model.faceSDK.bundle */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
@@ -50,8 +36,8 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B615373C244DA1F6001D1061 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B6153759244E7DB7001D1061 /* idl-license.face-ios */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "idl-license.face-ios"; sourceTree = "<group>"; };
-		B61537A4244E8D2F001D1061 /* com.baidu.idl.face.faceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = com.baidu.idl.face.faceSDK.bundle; sourceTree = "<group>"; };
-		B61537A5244E8D2F001D1061 /* com.baidu.idl.face.model.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = com.baidu.idl.face.model.bundle; sourceTree = "<group>"; };
+		B68800E8256D085F008BEA2B /* fltbdface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = fltbdface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6880167256DF9D9008BEA2B /* com.baidu.idl.face.model.faceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = com.baidu.idl.face.model.faceSDK.bundle; sourceTree = "<group>"; };
 		C6AC83034DDBA03A7BDB796F /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50D5DA2C533DEE9DF64199C /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +57,7 @@
 		2EA226D9E06656BE4335D24B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B68800E8256D085F008BEA2B /* fltbdface.framework */,
 				B615373C244DA1F6001D1061 /* libc++.tbd */,
 				C6AC83034DDBA03A7BDB796F /* Pods_Runner.framework */,
 			);
@@ -110,8 +97,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				B61537A4244E8D2F001D1061 /* com.baidu.idl.face.faceSDK.bundle */,
-				B61537A5244E8D2F001D1061 /* com.baidu.idl.face.model.bundle */,
+				B6880167256DF9D9008BEA2B /* com.baidu.idl.face.model.faceSDK.bundle */,
 				B6153759244E7DB7001D1061 /* idl-license.face-ios */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
@@ -155,7 +141,6 @@
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
-				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				0C0A3CFAF708ECD6E40E14AA /* [CP] Embed Pods Frameworks */,
 			);
@@ -208,11 +193,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
-				B61537A7244E8D2F001D1061 /* com.baidu.idl.face.model.bundle in Resources */,
 				B615375A244E7DB8001D1061 /* idl-license.face-ios in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				B6880168256DF9D9008BEA2B /* com.baidu.idl.face.model.faceSDK.bundle in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
-				B61537A6244E8D2F001D1061 /* com.baidu.idl.face.faceSDK.bundle in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,9 +210,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh",
+				"${PODS_ROOT}/../Flutter/Flutter.framework",
+				"${PODS_ROOT}/../.symlinks/plugins/fltbdface/ios/Libs/FaceSDK/IDLFaceSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/fltbdface/fltbdface.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDLFaceSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fltbdface.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

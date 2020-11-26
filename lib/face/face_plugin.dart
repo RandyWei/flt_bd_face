@@ -19,7 +19,6 @@ class FacePlugin {
       print("initialize:$error");
     });
     _eventStream.listen((value) {
-      print(value);
       if (value['event'] == 'initialize' && value['status'] == 0) {
         onSuccess?.call();
       }

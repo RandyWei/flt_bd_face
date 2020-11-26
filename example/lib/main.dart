@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:fltbdface/fltbdface.dart';
+import 'dart:convert';
 
 void main() => runApp(MyApp());
 
@@ -14,6 +15,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   FaceService faceService = FaceService();
+
+  var imageBytes;
 
   @override
   void initState() {
@@ -28,17 +31,22 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: RaisedButton(
-            onPressed: () {
-              faceService.startFaceLiveness(
-                  data: (data) {
-                    print(data);
-                  },
-                  onFailed: (error) {
+          child: Column(
+            children: [
+              RaisedButton(
+                onPressed: () {
+                  faceService.startFaceLiveness(data: (data) {
+                    setState(() {
+                      imageBytes = Base64Decoder().convert(data);
+                    });
+                  }, onFailed: (error) {
                     print(error);
                   });
-            },
-            child: Text("点击采集人脸"),
+                },
+                child: Text("点击采集人脸"),
+              ),
+              imageBytes != null ? Image.memory(imageBytes) : Container()
+            ],
           ),
         ),
       ),

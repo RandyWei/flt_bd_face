@@ -9,11 +9,15 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 Baidu&#x27;s face recognition SDK encapsulates the flutter version, calls native SDK and interface operations, and returns data to flutter
                        DESC
-  s.homepage         = 'https://www.bughub.dev'
+  s.homepage         = 'http://www.bughub.icu:8888'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'RandyWei' => 'smile561607154@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
+  s.public_header_files = 'Classes/**/*.h'
+  #s.resource = 'Classes/com.baidu.idl.face.live.action.image.bundle'
+  s.resources = ['Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle', 'Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle', 'Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle']
+  s.resource_bundle = { 'ImageBundle' => 'Assets/*.png' }
   s.dependency 'Flutter'
   s.platform = :ios, '9.0'
   s.ios.libraries = 'c++'

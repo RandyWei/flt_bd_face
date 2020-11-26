@@ -14,34 +14,47 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
         let eventChannelName = "plugin.bughub.dev/event"
         let eventChannel = FlutterEventChannel(name: eventChannelName, binaryMessenger: registrar.messenger())
         eventChannel.setStreamHandler(instance)
+        
     }
     
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         if call.method == "initialize" {
             let arguments = call.arguments as? [String: String] ?? [:]
-            self.faceManager?.setLicenseID(arguments["licenseId"], andLocalLicenceFile: arguments["licenseFileName"])
+            self.faceManager?.setLicenseID(arguments["licenseId"], andLocalLicenceFile: arguments["licenseFileName"], andRemoteAuthorize: true)
+            if self.faceManager?.canWork() == true {
+                var map = [String: Any]()
+                map["event"] = "initialize"
+                map["status"] = 0
+                map["message"] = "初始化成功"
+                self.eventSink?(map)
+                print("初始化成功")
+            }else{
+                self.eventSink?(FlutterError(code: "10010", message:"初始化失败", details: ""))
+                print("初始化失败")
+            }
             return
         }
         else if call.method == "setFaceConfig" {
             let arguments = call.arguments as? [String: Any] ?? [:]
-            self.faceManager?.setIllumThreshold(arguments["brightnessValue"] as? Int ?? 40)
-            self.faceManager?.setBlurThreshold(arguments["blurnessValue"] as? CGFloat ?? 0.5)
-            self.faceManager?.setOccluThreshold(arguments["occlusionValue"] as? CGFloat ?? 0.5)
-            self.faceManager?.setEulurAngleThrPitch(arguments["headPitchValue"] as? Int ?? 10,
-                                                    yaw: arguments["headYawValue"] as? Int ?? 10,
-                                                    roll: arguments["headRollValue"] as? Int ?? 10)
-            self.faceManager?.setCropFaceSizeWidth(arguments["cropFaceValue"] as? CGFloat ?? 400)
-            self.faceManager?.setMinFaceSize(arguments["minFaceSize"] as? Int ?? 200)
-            self.faceManager?.setNotFaceThreshold(arguments["notFaceValue"] as? CGFloat ?? 0.6)
-            self.faceManager?.setMaxCropImageNum(arguments["maxCropImageNum"] as? Int ?? 1)
-            self.faceManager?.setIsCheckQuality(arguments["isCheckFaceQuality"] as? Bool ?? true)
-
             
-            let configModel = LivingConfigModel.sharedInstance()
-            configModel?.liveActionArray = arguments["livenessTypeList"] as? NSMutableArray ?? []
-            configModel?.isByOrder = !(arguments["isLivenessRandom"] as? Bool ?? true)
-            configModel?.numOfLiveness = arguments["livenessRandomCount"] as? Int ?? 0
+            self.faceManager?.setMinFaceSize(arguments["minFaceSize"] as? Int32 ?? 200)
+            self.faceManager?.setNotFaceThreshold(arguments["notFaceValue"] as? CGFloat ?? 0.6)
+            self.faceManager?.setBlurThreshold(arguments["blurnessValue"] as? CGFloat ?? 0.3)
+            self.faceManager?.setIllumThreshold(arguments["brightnessValue"] as? CGFloat ?? 40)
+            self.faceManager?.setOccluThreshold(arguments["occlusionValue"] as? CGFloat ?? 0.5)
+            self.faceManager?.setEulurAngleThrPitch(arguments["headPitchValue"] as? Float ?? 8,
+                                                    yaw: arguments["headYawValue"] as? Float ?? 8,
+                                                    roll: arguments["headRollValue"] as? Float ?? 8)
+            self.faceManager?.setImageWithScale(arguments["scale"] as? CGFloat ?? 1.0)
+            self.faceManager?.setCropFaceSizeHeight(arguments["cropHeight"] as? CGFloat ?? 640)
+            self.faceManager?.setMaxCropImageNum(6)
+            self.faceManager?.setImageEncrypteWithType(arguments["secType"] as? Int32 ?? 0)
+            
+            
+            IDLFaceLivenessManager.sharedInstance()?.livenesswithList(arguments["livenessTypeList"] as? NSMutableArray as? [Any] , order: !(arguments["isLivenessRandom"] as? Bool ?? true), numberOfLiveness: arguments["livenessRandomCount"] as? Int ?? 0)
+            
+            self.faceManager?.initCollect()
             
             return
         }
@@ -54,19 +67,20 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
                 return
             }
             
-            let detectController = LivenessViewController()
+            print("11111")
+        
+            
+            let detectController = BDFaceLivenessViewController()
+
             detectController.resultHandler = { [weak self] imageString in
-                self?.eventSink?(imageString)
+                var map = [String: Any]()
+                map["event"] = "startFaceLiveness"
+                map["status"] = 0
+                map["message"] = "采集成功"
+                map["data"] = imageString
+                self?.eventSink?(map)
             }
-            
-//            let navController = UINavigationController(rootViewController: detectController)
-//            navController.modalPresentationStyle = .fullScreen
-//            rootViewController?.present(navController, animated: true, completion: nil)
-            
-//            let testController = TestViewController()
-//            let navController = UINavigationController(rootViewController: testController)
-//            navController.modalPresentationStyle = .fullScreen
-            
+
             rootViewController?.present(detectController, animated: true, completion: nil)
             
             return

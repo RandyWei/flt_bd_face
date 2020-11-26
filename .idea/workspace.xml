@@ -22,8 +22,90 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="优化初始化回调">
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" afterDir="false" />
+    <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="修改回调函数">
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/align_rgb-customized-ca-paddle_6_4_0_1.model.float32-6.4.0.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/blur-customized-pa-faceid5_0.model.int8-3.0.4.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/detect_rgb-customized-pa-faceid4_0.model.int8-0.0.6.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/eyes-customized-pa-mobile.model.float32-1.0.2.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/mouth-customized-pa-mobile.model.float32-1.0.2.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/mouth_mask-customized-pa-paddle_lite.model.float32-1.0.6.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/occlusion-customized-pa-mobile.model.float32-2.0.4.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Util/NSBundle+AssociatedBundle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Util/NSBundle+AssociatedBundle.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/blink.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/ding.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/facecover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/head_down.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/head_up.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/head_yaw.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/moveface.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/open_mouth.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/turn_left.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/turn_right.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.faceSDK.bundle/warning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.bundle/align.binary_64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.bundle/blur.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.bundle/facedetect.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.bundle/idl_license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.bundle/occlu.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.bundle/score.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/CircleView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/CircleView.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/FaceBaseViewController.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/FaceBaseViewController.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/FaceParameterConfig.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/LivenessViewController.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/LivenessViewController.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/LivingConfigModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/LivingConfigModel.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/RemindView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/RemindView.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/Utils/ImageUtils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/Utils/ImageUtils.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/VideoCaptureDevice.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/FaceDetector/VideoCaptureDevice.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftFltbdfacePlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/SwiftFltbdfacePlugin.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/FaceRecognize.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/FaceSDK.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/FaceSDKManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/FaceSDKManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceDetectionManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceDetectionManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceLivenessManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceLivenessManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceSDK.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceSDK.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/IDLFaceSDK" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/IDLFaceSDK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/_CodeSignature/CodeDirectory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/_CodeSignature/CodeRequirements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/_CodeSignature/CodeRequirements-1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/_CodeSignature/CodeResources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/_CodeSignature/CodeSignature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/blink.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/ding.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/facecover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/head_down.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/head_up.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/head_yaw.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/moveface.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/open_mouth.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/turn_left.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/turn_right.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/warning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle/align.binary_64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle/blur.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle/facedetect.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle/idl_license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle/occlu.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle/score.binary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/fltbdface.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/fltbdface.podspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/face/face_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/face/face_plugin.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605763863823</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="删除无用代码">
+      <created>1605837530790</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605837530790</updated>
+    </task>
+    <task id="LOCAL-00018" summary="修改回调函数">
+      <created>1605858446598</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605858446598</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,36 +302,54 @@
     <MESSAGE value="readme" />
     <MESSAGE value="更新百度人脸SDK" />
     <MESSAGE value="优化初始化回调" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化初始化回调" />
+    <MESSAGE value="删除无用代码" />
+    <MESSAGE value="修改回调函数" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改回调函数" />
   </component>
   <component name="WindowStateProjectService">
     <state x="760" y="271" key="AndroidProcessChooserDialog" timestamp="1605763330779">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="760" y="271" key="AndroidProcessChooserDialog/0.25.1920.992@0.25.1920.992" timestamp="1605763330779" />
-    <state width="1878" height="488" key="GridCell.Tab.0.bottom" timestamp="1605766698686">
+    <state x="102" y="126" width="1720" height="792" key="DiffContextDialog" timestamp="1606197562220">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="102" y="126" width="1720" height="792" key="DiffContextDialog/0.25.1920.992@0.25.1920.992" timestamp="1606197562220" />
+    <state width="1878" height="488" key="GridCell.Tab.0.bottom" timestamp="1606293907426">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.bottom/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761281" />
     <state width="1878" height="620" key="GridCell.Tab.0.bottom/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102878" />
-    <state width="1878" height="488" key="GridCell.Tab.0.bottom/0.25.1920.992@0.25.1920.992" timestamp="1605766698686" />
-    <state width="1878" height="488" key="GridCell.Tab.0.center" timestamp="1605766698686">
+    <state width="1878" height="488" key="GridCell.Tab.0.bottom/0.25.1920.992@0.25.1920.992" timestamp="1606293907426" />
+    <state width="1878" height="488" key="GridCell.Tab.0.center" timestamp="1606293907426">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.center/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761280" />
     <state width="1878" height="620" key="GridCell.Tab.0.center/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102877" />
-    <state width="1878" height="488" key="GridCell.Tab.0.center/0.25.1920.992@0.25.1920.992" timestamp="1605766698686" />
-    <state width="1878" height="488" key="GridCell.Tab.0.left" timestamp="1605766698686">
+    <state width="1878" height="488" key="GridCell.Tab.0.center/0.25.1920.992@0.25.1920.992" timestamp="1606293907426" />
+    <state width="1878" height="488" key="GridCell.Tab.0.left" timestamp="1606293907425">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.left/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761280" />
     <state width="1878" height="620" key="GridCell.Tab.0.left/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102877" />
-    <state width="1878" height="488" key="GridCell.Tab.0.left/0.25.1920.992@0.25.1920.992" timestamp="1605766698686" />
-    <state width="1878" height="488" key="GridCell.Tab.0.right" timestamp="1605766698686">
+    <state width="1878" height="488" key="GridCell.Tab.0.left/0.25.1920.992@0.25.1920.992" timestamp="1606293907425" />
+    <state width="1878" height="488" key="GridCell.Tab.0.right" timestamp="1606293907426">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state width="1878" height="619" key="GridCell.Tab.0.right/0.23.1920.1000@0.23.1920.1000" timestamp="1605573761280" />
     <state width="1878" height="620" key="GridCell.Tab.0.right/0.23.1920.1001@0.23.1920.1001" timestamp="1605259102877" />
-    <state width="1878" height="488" key="GridCell.Tab.0.right/0.25.1920.992@0.25.1920.992" timestamp="1605766698686" />
+    <state width="1878" height="488" key="GridCell.Tab.0.right/0.25.1920.992@0.25.1920.992" timestamp="1606293907426" />
+    <state x="562" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605837544296">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="562" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992@0.25.1920.992" timestamp="1605837544296" />
+    <state x="764" y="260" key="VcsDiffUtil.ChangesDialog" timestamp="1606197904871">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="764" y="260" key="VcsDiffUtil.ChangesDialog/0.25.1920.992@0.25.1920.992" timestamp="1606197904871" />
+    <state x="455" y="165" width="1222" height="719" key="find.popup" timestamp="1606293608195">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="455" y="165" width="1222" height="719" key="find.popup/0.25.1920.992@0.25.1920.992" timestamp="1606293608195" />
   </component>
 </project>

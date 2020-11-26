@@ -68,7 +68,7 @@ typedef NS_ENUM(NSUInteger, TrackDetectRemindCode) {
 
 typedef void (^DetectStrategyCompletion) (FaceInfo * faceinfo,NSDictionary * images, DetectRemindCode remindCode);
 
-typedef void (^TrackDetectStrategyCompletion) (FaceInfo * faceinfo, TrackDetectRemindCode remindCode);
+//typedef void (^TrackDetectStrategyCompletion) (NSArray * faceArray, TrackDetectRemindCode remindCode);
 
 @interface IDLFaceDetectionManager : NSObject
 
@@ -76,13 +76,15 @@ typedef void (^TrackDetectStrategyCompletion) (FaceInfo * faceinfo, TrackDetectR
 
 + (instancetype)sharedInstance;
 
-/*带黑边的方法*/
-- (void)detectStratrgyWithQualityControlImage:(UIImage *)image previewRect:(CGRect)previewRect detectRect:(CGRect)detectRect completionHandler:(DetectStrategyCompletion)completion;
-
-/*不带黑边*/
+/**
+ * 人脸采集，成功之后返回扣图图片，原始图片
+ * @param image 镜头拿到的图片
+ * @param previewRect 预览的Rect
+ * @param detectRect 检测的Rect
+ * return completion 回调信息
+ */
 - (void)detectStratrgyWithNormalImage:(UIImage *)image previewRect:(CGRect)previewRect detectRect:(CGRect)detectRect completionHandler:(DetectStrategyCompletion)completion;
 
-- (void)detectMultiFacesImage:(UIImage *)image withMaxFaceCount:(NSInteger)maxFaceCount handler:(TrackDetectStrategyCompletion)completion;
 
 - (void)reset;
 
