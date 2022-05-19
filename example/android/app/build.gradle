@@ -32,9 +32,6 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    lintOptions {
-        disable 'InvalidPackage'
-    }
 
     signingConfigs {
         Release {
@@ -58,13 +55,16 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.Release
-            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
             signingConfig signingConfigs.Release
         }
     }
+    lint {
+        disable 'InvalidPackage'
+    }
+    namespace 'dev.bughub.plugin.fltbdface_example'
 }
 
 flutter {
