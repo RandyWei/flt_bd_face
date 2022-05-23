@@ -21,7 +21,7 @@ Baidu&#x27;s face recognition SDK encapsulates the flutter version, calls native
 
 //导入方式
 dependencies:
-  flt_video_player:
+  fltbdface:
     git:
       url: https://github.com/RandyWei/flt_bd_face.git
 ```
