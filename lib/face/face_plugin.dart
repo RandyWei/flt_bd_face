@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'face_config.dart';
@@ -8,10 +9,10 @@ class FacePlugin {
       EventChannel("plugin.bughub.dev/event").receiveBroadcastStream();
 
   initialize(
-      {String licenseId,
-      String licenseFileName,
-      Function onSuccess,
-      Function onFailed}) {
+      {required String licenseId,
+      required String licenseFileName,
+      Function? onSuccess,
+      Function? onFailed}) {
     _channel.invokeMethod("initialize", {
       "licenseId": licenseId,
       "licenseFileName": licenseFileName
@@ -36,12 +37,13 @@ class FacePlugin {
     });
   }
 
-  startFaceLiveness({Function data, Function onFailed}) {
+  startFaceLiveness({required Function data, required Function onFailed}) {
     _channel.invokeMethod("startFaceLiveness").catchError((error) {
       print("startFaceLiveness:$error");
       onFailed.call(error);
     });
     _eventStream.listen((value) {
+      debugPrint(value.toString());
       if (value['event'] == 'startFaceLiveness') {
         data.call(value['data']);
       }

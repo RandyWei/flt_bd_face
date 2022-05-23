@@ -34,8 +34,5 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme_NoTitle"/>
 
-        <activity android:name=".face.CollectionSuccessExpActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme_NoTitle" />
     </application>
 </manifest>

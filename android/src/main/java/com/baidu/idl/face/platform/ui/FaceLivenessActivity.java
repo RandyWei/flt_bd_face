@@ -40,14 +40,15 @@ import com.baidu.idl.face.platform.ILivenessStrategyCallback;
 import com.baidu.idl.face.platform.ILivenessViewCallback;
 import com.baidu.idl.face.platform.LivenessTypeEnum;
 import com.baidu.idl.face.platform.manager.TimeManager;
+import com.baidu.idl.face.platform.model.FaceExtInfo;
 import com.baidu.idl.face.platform.model.ImageInfo;
 import com.baidu.idl.face.platform.ui.utils.BrightnessUtils;
+import com.baidu.idl.face.platform.ui.utils.CameraPreviewUtils;
 import com.baidu.idl.face.platform.ui.utils.CameraUtils;
 import com.baidu.idl.face.platform.ui.utils.VolumeUtils;
 import com.baidu.idl.face.platform.ui.widget.FaceDetectRoundView;
 import com.baidu.idl.face.platform.utils.APIUtils;
 import com.baidu.idl.face.platform.utils.Base64Utils;
-import com.baidu.idl.face.platform.utils.CameraPreviewUtils;
 import com.baidu.idl.face.platform.utils.DensityUtils;
 
 import java.util.ArrayList;
@@ -111,7 +112,6 @@ public class FaceLivenessActivity extends Activity implements
     // 监听系统音量广播
     protected BroadcastReceiver mVolumeReceiver;
 
-    public String mBmpStr;
     private Context mContext;
     private AnimationDrawable mAnimationDrawable;
     private LivenessTypeEnum mLivenessType = null;
@@ -312,6 +312,11 @@ public class FaceLivenessActivity extends Activity implements
             mSurfaceHolder.addCallback(this);
         }
 
+        if (mCamera != null) {
+            CameraUtils.releaseCamera(mCamera);
+            mCamera = null;
+        }
+
         if (mCamera == null) {
             try {
                 mCamera = open();
@@ -340,25 +345,10 @@ public class FaceLivenessActivity extends Activity implements
         Point point = CameraPreviewUtils.getBestPreview(mCameraParam,
                 new Point(mDisplayWidth, mDisplayHeight));
 
-        Camera.Size bestPreviewSize = getBestPreviewSize(mCameraParam, new Point(mDisplayWidth, mDisplayHeight));
-
-//        mPreviewWidth = point.x;
-//        mPreviewHight = point.y;
-
-        mPreviewWidth = bestPreviewSize.width;
-        mPreviewHight = bestPreviewSize.height;
-        Log.e(TAG, "x = " + mPreviewWidth + " y = " + mPreviewHight);
+        mPreviewWidth = point.x;
+        mPreviewHight = point.y;
+        // Log.e(TAG, "x = " + mPreviewWidth + " y = " + mPreviewHight);
         // Preview 768,432
-
-        int w = mDisplayWidth;
-        int h = mDisplayHeight;
-        double rate = (double) mPreviewWidth / mPreviewHight;
-        //根据相机最佳分辨率重新计算预览画面的比例
-        FrameLayout.LayoutParams cameraFL = new FrameLayout.LayoutParams(
-                (int) (w * FaceDetectRoundView.SURFACE_RATIO), (int) (w * rate * FaceDetectRoundView.SURFACE_RATIO),
-                Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-
-        mSurfaceView.setLayoutParams(cameraFL);
 
         if (mILivenessStrategy != null) {
             mILivenessStrategy.setPreviewDegree(degree);
@@ -384,43 +374,6 @@ public class FaceLivenessActivity extends Activity implements
             CameraUtils.releaseCamera(mCamera);
             mCamera = null;
         }
-    }
-
-    /**
-     * 选择最佳相机预览分辨率
-     *
-     * @param parameters 相机参数
-     * @param point      手机分辨率 宽度：point.x，高度point.y
-     * @return 最佳相机分辨率
-     */
-    public static Camera.Size getBestPreviewSize(Camera.Parameters parameters, Point point) {
-
-        List<Camera.Size> list = parameters.getSupportedPreviewSizes();
-
-        int max = 0;
-        int index = -1;
-
-        for (int i = 0; i < list.size(); i++) {
-            int height = list.get(i).height;
-            int width = list.get(i).width;
-
-            // 当手机分辨率和预览分辨率相同的时候，直接返回该预览分辨率
-            // 否则选择最大分辨率
-            if (point.x == width && point.y == height) {
-                return list.get(index);
-            }
-
-            Log.e(TAG, "getBestPreviewSize: 相机分辨率 = " + height + " x " + width);
-
-            int i1 = height * width;
-            if (i1 > max) {
-                max = i1;
-                index = i;
-            }
-        }
-        return list.get(index);
-
-
     }
 
     protected void stopPreview() {
@@ -540,7 +493,6 @@ public class FaceLivenessActivity extends Activity implements
 
         if (status == FaceStatusNewEnum.OK) {
             mIsCompletion = true;
-            saveImage(base64ImageCropMap, base64ImageSrcMap);
             // saveAllImage(base64ImageCropMap, base64ImageSrcMap);
         }
     }
@@ -559,6 +511,7 @@ public class FaceLivenessActivity extends Activity implements
                 mFaceDetectRoundView.setProcessCount(currentLivenessCount,
                         mFaceConfig.getLivenessTypeList().size());
                 // onRefreshSuccessView(true);
+                stopAnim();
                 break;
             case FaceLivenessActionTypeLiveEye:
             case FaceLivenessActionTypeLiveMouth:
@@ -571,13 +524,6 @@ public class FaceLivenessActivity extends Activity implements
                 mFaceDetectRoundView.setTipSecondText("");
                 mFaceDetectRoundView.setProcessCount(currentLivenessCount,
                         mFaceConfig.getLivenessTypeList().size());
-                if (mAnimationDrawable != null) {
-                    mAnimationDrawable.stop();
-                }
-
-                if (mRelativeAddImageView.getVisibility() == View.VISIBLE) {
-                    mRelativeAddImageView.setVisibility(View.GONE);
-                }
                 // onRefreshTipsView(false, message);
                 // onRefreshSuccessView(false);
                 break;
@@ -585,7 +531,7 @@ public class FaceLivenessActivity extends Activity implements
             case DetectRemindCodePitchOutofDownRange:
             case DetectRemindCodeYawOutofLeftRange:
             case DetectRemindCodeYawOutofRightRange:
-                mFaceDetectRoundView.setTipTopText("");
+                mFaceDetectRoundView.setTipTopText("请保持正脸");
                 mFaceDetectRoundView.setTipSecondText(message);
                 mFaceDetectRoundView.setProcessCount(currentLivenessCount,
                         mFaceConfig.getLivenessTypeList().size());
@@ -596,7 +542,9 @@ public class FaceLivenessActivity extends Activity implements
                 mFaceDetectRoundView.setProcessCount(currentLivenessCount,
                         mFaceConfig.getLivenessTypeList().size());
                 // 帧动画开启
-                mRelativeAddImageView.setVisibility(View.VISIBLE);
+                if (mRelativeAddImageView.getVisibility() == View.INVISIBLE) {
+                    mRelativeAddImageView.setVisibility(View.VISIBLE);
+                }
                 loadAnimSource();
                 // 监听帧动画时间
                 int duration = 0;
@@ -607,7 +555,7 @@ public class FaceLivenessActivity extends Activity implements
                 TimeManager.getInstance().setActiveAnimTime(duration);
                 break;
             default:
-                mFaceDetectRoundView.setTipTopText("");
+                mFaceDetectRoundView.setTipTopText("请保持正脸");
                 mFaceDetectRoundView.setTipSecondText(message);
                 mFaceDetectRoundView.setProcessCount(currentLivenessCount,
                         mFaceConfig.getLivenessTypeList().size());
@@ -624,9 +572,9 @@ public class FaceLivenessActivity extends Activity implements
                 case Eye:
                     mImageAnim.setBackgroundResource(R.drawable.anim_eye);
                     break;
-                case HeadLeftOrRight:
-                    mImageAnim.setBackgroundResource(R.drawable.anim_shake);
-                    break;
+//                case HeadLeftOrRight:
+//                    mImageAnim.setBackgroundResource(R.drawable.anim_shake);
+//                    break;
                 case HeadLeft:
                     mImageAnim.setBackgroundResource(R.drawable.anim_left);
                     break;
@@ -645,64 +593,8 @@ public class FaceLivenessActivity extends Activity implements
                 default:
                     break;
             }
-        }
-        mAnimationDrawable = (AnimationDrawable) mImageAnim.getBackground();
-        mAnimationDrawable.start();
-    }
-
-    private void saveImage(HashMap<String, ImageInfo> imageCropMap, HashMap<String, ImageInfo> imageSrcMap) {
-        if (imageCropMap != null && imageCropMap.size() > 0) {
-            List<Map.Entry<String, ImageInfo>> list1 = new ArrayList<>(imageCropMap.entrySet());
-            Collections.sort(list1, new Comparator<Map.Entry<String, ImageInfo>>() {
-
-                @Override
-                public int compare(Map.Entry<String, ImageInfo> o1,
-                                   Map.Entry<String, ImageInfo> o2) {
-                    String[] key1 = o1.getKey().split("_");
-                    String score1 = key1[2];
-                    String[] key2 = o2.getKey().split("_");
-                    String score2 = key2[2];
-                    // 降序排序
-                    return Float.valueOf(score2).compareTo(Float.valueOf(score1));
-                }
-            });
-
-            // TODO:发送加密的base64字符串
-//            int secType = mFaceConfig.getSecType();
-//            String base64;
-//            if (secType == 0) {
-//                base64 = mBmpStr;
-//            } else {
-//                base64 = list1.get(0).getValue().getSecBase64();
-//            }
-//            SecRequest.sendMessage(FaceDetectActivity.this, base64, secType);
-        }
-
-        if (imageSrcMap != null && imageSrcMap.size() > 0) {
-            List<Map.Entry<String, ImageInfo>> list2 = new ArrayList<>(imageSrcMap.entrySet());
-            Collections.sort(list2, new Comparator<Map.Entry<String, ImageInfo>>() {
-
-                @Override
-                public int compare(Map.Entry<String, ImageInfo> o1,
-                                   Map.Entry<String, ImageInfo> o2) {
-                    String[] key1 = o1.getKey().split("_");
-                    String score1 = key1[2];
-                    String[] key2 = o2.getKey().split("_");
-                    String score2 = key2[2];
-                    // 降序排序
-                    return Float.valueOf(score2).compareTo(Float.valueOf(score1));
-                }
-            });
-            mBmpStr = list2.get(0).getValue().getBase64();
-            // TODO:发送底层加密的base64字符串
-//            int secType = mFaceConfig.getSecType();
-//            String base64;
-//            if (secType == 0) {
-//                base64 = mBmpStr;
-//            } else {
-//                base64 = list2.get(0).getValue().getSecBase64();
-//            }
-//            SecRequest.sendMessage(FaceDetectActivity.this, base64, secType);
+            mAnimationDrawable = (AnimationDrawable) mImageAnim.getBackground();
+            mAnimationDrawable.start();
         }
     }
 
@@ -719,6 +611,29 @@ public class FaceLivenessActivity extends Activity implements
     @Override
     public void viewReset() {
         mFaceDetectRoundView.setProcessCount(0, 1);
+    }
+
+    @Override
+    public void animStop() {
+        stopAnim();
+    }
+
+    @Override
+    public void setFaceInfo(FaceExtInfo faceInfo) {
+        // TODO：传递FaceInfo信息，便于调试画人脸检测框和人脸检测区域（使用时，将注释放开）
+        // if (mFaceDetectRoundView != null) {
+        //     mFaceDetectRoundView.setFaceInfo(faceInfo);
+        // }
+    }
+
+    private void stopAnim() {
+        if (mAnimationDrawable != null) {
+            mAnimationDrawable.stop();
+            mAnimationDrawable = null;
+        }
+        if (mRelativeAddImageView.getVisibility() == View.VISIBLE) {
+            mRelativeAddImageView.setVisibility(View.INVISIBLE);
+        }
     }
 
     // ----------------------------------------供调试用----------------------------------------------
@@ -738,7 +653,6 @@ public class FaceLivenessActivity extends Activity implements
                     return Float.valueOf(score2).compareTo(Float.valueOf(score1));
                 }
             });
-            mBmpStr = list1.get(0).getValue().getBase64();
             setImageView1(list1);
         }
 
@@ -757,7 +671,6 @@ public class FaceLivenessActivity extends Activity implements
                     return Float.valueOf(score2).compareTo(Float.valueOf(score1));
                 }
             });
-            mBmpStr = list2.get(0).getValue().getBase64();
             setImageView2(list2);
         }
     }

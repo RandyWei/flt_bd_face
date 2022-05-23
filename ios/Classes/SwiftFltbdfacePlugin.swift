@@ -92,6 +92,7 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
 
 extension SwiftFltbdfacePlugin: FlutterStreamHandler {
     public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+        print("onListen")
         eventSink = events
         return nil
     }

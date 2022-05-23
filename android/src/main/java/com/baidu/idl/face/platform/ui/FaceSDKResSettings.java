@@ -5,7 +5,9 @@ package com.baidu.idl.face.platform.ui;
 
 import com.baidu.idl.face.platform.FaceEnvironment;
 import com.baidu.idl.face.platform.FaceStatusNewEnum;
+
 import dev.bughub.plugin.fltbdface.R;
+
 /**
  * sdk使用Res资源设置功能
  */
@@ -34,8 +36,6 @@ public class FaceSDKResSettings {
                 R.raw.liveness_head_left);
         FaceEnvironment.setSoundId(FaceStatusNewEnum.FaceLivenessActionTypeLiveYawRight,
                 R.raw.liveness_head_right);
-        FaceEnvironment.setSoundId(FaceStatusNewEnum.FaceLivenessActionTypeLiveYaw,
-                R.raw.liveness_head_left_right);
         FaceEnvironment.setSoundId(FaceStatusNewEnum.FaceLivenessActionComplete,
                 R.raw.face_good);
         FaceEnvironment.setSoundId(FaceStatusNewEnum.OK, R.raw.face_good);
@@ -92,8 +92,6 @@ public class FaceSDKResSettings {
                 R.string.liveness_head_left);
         FaceEnvironment.setTipsId(FaceStatusNewEnum.FaceLivenessActionTypeLiveYawRight,
                 R.string.liveness_head_right);
-        FaceEnvironment.setTipsId(FaceStatusNewEnum.FaceLivenessActionTypeLiveYaw,
-                R.string.liveness_head_left_right);
         FaceEnvironment.setTipsId(FaceStatusNewEnum.FaceLivenessActionComplete,
                 R.string.liveness_good);
         FaceEnvironment.setTipsId(FaceStatusNewEnum.OK, R.string.liveness_good);

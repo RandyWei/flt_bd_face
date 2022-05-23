@@ -24,7 +24,7 @@ import java.net.URLDecoder;
 public class SecRequest {
     private static final String TAG = SecRequest.class.getSimpleName();
 
-    private static final String REQUEST_URL = "http://10.145.80.201:8316/api/v3/person/verify_sec?appid=9504621";
+    private static final String REQUEST_URL = "http://10.138.32.176:8518/api/v3/person/verify_sec?appid=7758258";
 
 //    JSONObject jsonObject = new JSONObject();
 //    jsonObject.put("image_type", "BASE64");                           // 图片类型
@@ -55,7 +55,7 @@ public class SecRequest {
                     jsonObject.put("liveness_control", "NONE");
                     // TODO：是否开启风控认证，但如果sceType为false时，该参数必须传入false
                     jsonObject.put("risk_identify", false);
-                    jsonObject.put("zid", FaceSDKManager.getInstance().getZid(context, 5001));
+                    jsonObject.put("zid", FaceSDKManager.getInstance().getZid(context));
                     jsonObject.put("ip", "172.30.154.173");
                     jsonObject.put("phone", "13000000000");
                     if (secType == 0) {

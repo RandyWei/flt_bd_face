@@ -4,20 +4,21 @@ import android.app.Activity
 import android.app.Application
 import android.util.Log
 import androidx.annotation.NonNull
+import com.chinahrt.app.pharmacist.QueuingEventSink
 import dev.bughub.plugin.fltbdface.face.FaceDelegate
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.BinaryMessenger
+import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 
 
 /** FltbdfacePlugin */
-public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
+class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
     private var activity: Activity? = null
     private var delegate: FaceDelegate? = null
@@ -26,9 +27,10 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     private var channel: MethodChannel? = null
     private var application: Application? = null
 
+    private var eventSink = QueuingEventSink()
 
-    override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        flutterBinding = flutterPluginBinding
+    override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+        flutterBinding = binding
     }
 
     // This static function is optional and equivalent to onAttachedToEngine. It supports the old
@@ -44,22 +46,9 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
         private const val CHANNEL = "plugin.bughub.dev/fltbdface"
 
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            if (registrar.activity() == null) {
-                return
-            }
-            val activity = registrar.activity()
-            var application: Application? = null
-            if (registrar.context() != null) {
-                application = registrar.context().applicationContext as Application
-            }
-            val plugin = FltbdfacePlugin()
-            plugin.setup(registrar.messenger(), application!!, activity, registrar, null)
-        }
     }
 
-    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+    override fun onMethodCall(call: MethodCall, result: Result) {
         Log.i("2222", "${this.hashCode()}")
         if (activity == null) {
             result.error("no_activity", "face plugin requires a foreground activity.", null)
@@ -91,17 +80,32 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                 val notFaceValue: Float? = call.argument<Double>("notFaceValue")?.toFloat()
                 val occlusionValue: Float? = call.argument<Double>("occlusionValue")?.toFloat()
                 val scale: Float? = call.argument<Double>("scale")?.toFloat()
-                val eyeClosedValue: Float? = call.argument<Float>("eyeClosedValue")
+                val eyeClosedValue: Double? = call.argument<Double>("eyeClosedValue")
                 val isOpenSound: Boolean = call.argument<Boolean>("isSound") ?: true
                 val cacheImageNum: Int? = call.argument<Int>("cacheImageNum")
                 val livenessRandomCount: Int? = call.argument<Int>("livenessRandomCount")
                 val secType: Int? = call.argument<Int>("secType")
 
 
-                delegate?.setFaceConfig(livenessTypeList, livenessRandom = livenessRandom, blurnessValue = blurnessValue, brightnessValue = brightnessValue,
-                        headPitchValue = headPitchValue, headYawValue = headYawValue, headRollValue = headRollValue, minFaceSize = minFaceSize, notFaceValue = notFaceValue,
-                        occlusionValue = occlusionValue, livenessRandomCount = livenessRandomCount, eyeClosedValue = eyeClosedValue, cacheImageNum = cacheImageNum,
-                        isOpenSound = isOpenSound, scale = scale, cropHeight = cropHeight, secType = secType)
+                delegate?.setFaceConfig(
+                    livenessTypeList,
+                    livenessRandom = livenessRandom,
+                    blurnessValue = blurnessValue,
+                    brightnessValue = brightnessValue,
+                    headPitchValue = headPitchValue,
+                    headYawValue = headYawValue,
+                    headRollValue = headRollValue,
+                    minFaceSize = minFaceSize,
+                    notFaceValue = notFaceValue,
+                    occlusionValue = occlusionValue,
+                    livenessRandomCount = livenessRandomCount,
+                    eyeClosedValue = eyeClosedValue,
+                    cacheImageNum = cacheImageNum,
+                    isOpenSound = isOpenSound,
+                    scale = scale,
+                    cropHeight = cropHeight,
+                    secType = secType
+                )
 
                 result.success(null)
             }
@@ -122,26 +126,34 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     }
 
     private fun setup(
-            messenger: BinaryMessenger,
-            application: Application,
-            activity: Activity,
-            registrar: Registrar?,
-            activityBinding: ActivityPluginBinding?) {
+        messenger: BinaryMessenger,
+        application: Application,
+        activity: Activity,
+        activityBinding: ActivityPluginBinding?
+    ) {
         this.activity = activity
         this.application = application
-        delegate = FaceDelegate(activity, flutterBinding?.binaryMessenger)
+        delegate = FaceDelegate(activity, eventSink)
         channel = MethodChannel(messenger, CHANNEL)
         channel?.setMethodCallHandler(this)
-        if (registrar != null) { // V1 embedding setup for activity listeners.
-            registrar.addActivityResultListener(delegate)
-            registrar.addRequestPermissionsResultListener(delegate)
-        } else { // V2 embedding setup for activity listeners.
-            activityBinding?.addActivityResultListener(delegate!!)
-            activityBinding?.addRequestPermissionsResultListener(delegate!!)
-        }
+
+        EventChannel(flutterBinding?.binaryMessenger, "plugin.bughub.dev/event").setStreamHandler(
+            object :
+                EventChannel.StreamHandler {
+                override fun onListen(arguments: Any?, events: EventChannel.EventSink?) {
+                    eventSink.setDelegate(events)
+                }
+
+                override fun onCancel(arguments: Any?) {
+                    eventSink.setDelegate(null)
+                }
+            })
+
+        activityBinding?.addActivityResultListener(delegate!!)
+        activityBinding?.addRequestPermissionsResultListener(delegate!!)
     }
 
-    override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         flutterBinding = null
     }
 
@@ -155,7 +167,12 @@ public class FltbdfacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
         activityBinding = binding
-        setup(flutterBinding?.binaryMessenger!!, flutterBinding?.applicationContext as Application, binding.activity, null, binding)
+        setup(
+            flutterBinding?.binaryMessenger!!,
+            flutterBinding?.applicationContext as Application,
+            binding.activity,
+            binding
+        )
     }
 
     override fun onDetachedFromActivityForConfigChanges() {

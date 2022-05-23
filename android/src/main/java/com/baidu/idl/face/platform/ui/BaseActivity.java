@@ -5,8 +5,16 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import dev.bughub.plugin.fltbdface.R;
 
 public class BaseActivity extends Activity {
     @Override
@@ -57,5 +65,22 @@ public class BaseActivity extends Activity {
                 flag = true;
             }
         }
+    }
+
+    /**
+     * 自定义Toast
+     * @param message toast 消息
+     */
+    public void showCustomToast(String message) {
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View inflate = layoutInflater.inflate(R.layout.setting_toast_layout,
+                (ViewGroup) findViewById(R.id.toast_layout));
+        TextView toastTxt = (TextView) inflate.findViewById(R.id.toast_txt);
+        toastTxt.setText(message);
+        Toast toast = new Toast(this);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.setView(inflate);
+        toast.show();
     }
 }

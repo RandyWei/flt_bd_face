@@ -15,6 +15,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import com.baidu.idl.face.platform.model.FaceExtInfo;
 import com.baidu.idl.face.platform.utils.DensityUtils;
 
 /**
@@ -57,6 +58,10 @@ public class FaceDetectRoundView extends View {
     private boolean mIsActiveLive;
     private String mTipSecondText;
     private String mTipTopText;
+
+    private static float mRatioX;
+    private static float mRatioY;
+    private FaceExtInfo mFaceExtInfo;
 
     public FaceDetectRoundView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -113,6 +118,11 @@ public class FaceDetectRoundView extends View {
     public void setProcessCount(int successActiveCount, int totalActiveCount) {
         mSuccessActiveCount = successActiveCount;
         mTotalActiveCount = totalActiveCount;
+        postInvalidate();
+    }
+
+    public void setFaceInfo(FaceExtInfo faceExtInfo) {
+        mFaceExtInfo = faceExtInfo;
         postInvalidate();
     }
 
@@ -178,6 +188,13 @@ public class FaceDetectRoundView extends View {
         canvas.drawColor(Color.TRANSPARENT);
         canvas.drawPaint(mBGPaint);
         canvas.drawCircle(mX, mY, mR, mFaceRoundPaint);
+        // TODO：画检测区域（用于调试，这4个参数分别表示屏幕宽高和手机摄像头分辨率宽高，需要手动修改）
+        // TODO：（使用时，将注释放开）
+        // canvas.drawRect(getPreviewDetectRect(1080, 1920, 432, 768), mCircleLinePaint);
+        // TODO：画人脸检测框（用于调试，使用时，将注释放开）
+        // if (getFaceInfoRect(mFaceExtInfo) != null) {
+        //     canvas.drawRect(getFaceInfoRect(mFaceExtInfo), mCircleLinePaint);
+        // }
         // 画文字
         if (!TextUtils.isEmpty(mTipSecondText)) {
             canvas.drawText(mTipSecondText, mX, mY - mR - 40 - 25 - 59, mTextSecondPaint);
@@ -220,6 +237,9 @@ public class FaceDetectRoundView extends View {
         canvas.restore();
     }
 
+    // ----------------------------------------供调试用----------------------------------------------
+
+    // 获取人脸检测区域
     public static Rect getPreviewDetectRect(int w, int pw, int ph) {
         float round = (w / 2) - ((w / 2) * WIDTH_SPACE_RATIO);
         float x = pw / 2;
@@ -232,6 +252,31 @@ public class FaceDetectRoundView extends View {
                 (int) (y + hr));
         // Log.e(TAG, "FaceRoundView getPreviewDetectRect " + pw + "-" + ph + "-" + rect.toString());
         return rect;
+    }
+
+    // 获取人脸检测区域（调试使用）
+    public static Rect getPreviewDetectRect(int w, int h, int pw, int ph) {
+        float round = (w / 2) - ((w / 2) * WIDTH_SPACE_RATIO);
+        mRatioX = (w * 1.0f) / (pw * 1.0f);
+        mRatioY = (h * 1.0f) / (ph * 1.0f);  // 获取屏幕宽高和手机摄像头宽高的比值，用于映射
+        float x = pw / 2.0f * mRatioX;
+        float y = (ph / 2.0f * mRatioY) - ((ph / 2.0f * mRatioY) * HEIGHT_RATIO);
+        float r = (pw / 2.0f * mRatioX) > round ? round : (pw / 2.0f * mRatioX);
+        float hr = r + (r * HEIGHT_EXT_RATIO);
+        Rect rect = new Rect((int) (x - r),
+                (int) (y - hr),
+                (int) (x + r),
+                (int) (y + hr));
+        // Log.e(TAG, "FaceRoundView getPreviewDetectRect " + pw + "-" + ph + "-" + rect.toString());
+        return rect;
+    }
+
+    // 获取人脸检测框（调试使用）
+    public static Rect getFaceInfoRect(FaceExtInfo faceInfo) {
+        if (faceInfo == null) {
+            return null;
+        }
+        return faceInfo.getFaceRect(mRatioX, mRatioY, SURFACE_RATIO);
     }
 
 }

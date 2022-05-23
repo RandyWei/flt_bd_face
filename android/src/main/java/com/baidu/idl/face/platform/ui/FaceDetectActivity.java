@@ -40,7 +40,7 @@ import com.baidu.idl.face.platform.ui.utils.VolumeUtils;
 import com.baidu.idl.face.platform.ui.widget.FaceDetectRoundView;
 import com.baidu.idl.face.platform.utils.APIUtils;
 import com.baidu.idl.face.platform.utils.Base64Utils;
-import com.baidu.idl.face.platform.utils.CameraPreviewUtils;
+import com.baidu.idl.face.platform.ui.utils.CameraPreviewUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -100,7 +100,6 @@ public class FaceDetectActivity extends Activity implements
     protected int mPreviewDegree;
     // 监听系统音量广播
     protected BroadcastReceiver mVolumeReceiver;
-    public String mBmpStr;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -265,6 +264,11 @@ public class FaceDetectActivity extends Activity implements
         if (mSurfaceView != null && mSurfaceView.getHolder() != null) {
             mSurfaceHolder = mSurfaceView.getHolder();
             mSurfaceHolder.addCallback(this);
+        }
+
+        if (mCamera != null) {
+            CameraUtils.releaseCamera(mCamera);
+            mCamera = null;
         }
 
         if (mCamera == null) {
@@ -440,7 +444,6 @@ public class FaceDetectActivity extends Activity implements
 
         if (status == FaceStatusNewEnum.OK) {
             mIsCompletion = true;
-            saveImage(base64ImageCropMap, base64ImageSrcMap);
             // saveAllImage(base64ImageCropMap, base64ImageSrcMap);
         }
     }
@@ -467,67 +470,10 @@ public class FaceDetectActivity extends Activity implements
         }
     }
 
-    private void saveImage(HashMap<String, ImageInfo> imageCropMap, HashMap<String, ImageInfo> imageSrcMap) {
-        if (imageCropMap != null && imageCropMap.size() > 0) {
-            List<Map.Entry<String, ImageInfo>> list1 = new ArrayList<>(imageCropMap.entrySet());
-            Collections.sort(list1, new Comparator<Map.Entry<String, ImageInfo>>() {
-
-                @Override
-                public int compare(Map.Entry<String, ImageInfo> o1,
-                                   Map.Entry<String, ImageInfo> o2) {
-                    String[] key1 = o1.getKey().split("_");
-                    String score1 = key1[2];
-                    String[] key2 = o2.getKey().split("_");
-                    String score2 = key2[2];
-                    // 降序排序
-                    return Float.valueOf(score2).compareTo(Float.valueOf(score1));
-                }
-            });
-
-            // TODO：发送加密的base64字符串
-//            int secType = mFaceConfig.getSecType();
-//            String base64;
-//            if (secType == 0) {
-//                base64 = list1.get(0).getValue().getBase64();
-//            } else {
-//                base64 = list1.get(0).getValue().getSecBase64();
-//            }
-//            SecRequest.sendMessage(FaceDetectActivity.this, base64, secType);
-        }
-
-        if (imageSrcMap != null && imageSrcMap.size() > 0) {
-            List<Map.Entry<String, ImageInfo>> list2 = new ArrayList<>(imageSrcMap.entrySet());
-            Collections.sort(list2, new Comparator<Map.Entry<String, ImageInfo>>() {
-
-                @Override
-                public int compare(Map.Entry<String, ImageInfo> o1,
-                                   Map.Entry<String, ImageInfo> o2) {
-                    String[] key1 = o1.getKey().split("_");
-                    String score1 = key1[2];
-                    String[] key2 = o2.getKey().split("_");
-                    String score2 = key2[2];
-                    // 降序排序
-                    return Float.valueOf(score2).compareTo(Float.valueOf(score1));
-                }
-            });
-            mBmpStr = list2.get(0).getValue().getBase64();
-            // TODO:发送加密的base64字符串
-//            int secType = mFaceConfig.getSecType();
-//            String base64;
-//            if (secType == 0) {
-//                base64 = mBmpStr;
-//            } else {
-//                base64 = list1.get(0).getValue().getSecBase64();
-//            }
-//            SecRequest.sendMessage(FaceDetectActivity.this, base64, secType);
-        }
-    }
-
     private static Bitmap base64ToBitmap(String base64Data) {
         byte[] bytes = Base64Utils.decode(base64Data, Base64Utils.NO_WRAP);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
-
 
     // ----------------------------------------供调试用----------------------------------------------
     private void saveAllImage(HashMap<String, ImageInfo> imageCropMap, HashMap<String, ImageInfo> imageSrcMap) {
@@ -546,7 +492,6 @@ public class FaceDetectActivity extends Activity implements
                     return Float.valueOf(score2).compareTo(Float.valueOf(score1));
                 }
             });
-            mBmpStr = list1.get(0).getValue().getBase64();
             setImageView1(list1);
         }
 
@@ -565,7 +510,6 @@ public class FaceDetectActivity extends Activity implements
                     return Float.valueOf(score2).compareTo(Float.valueOf(score1));
                 }
             });
-            mBmpStr = list2.get(0).getValue().getBase64();
             setImageView2(list2);
         }
     }

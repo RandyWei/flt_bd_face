@@ -43,7 +43,7 @@
         android:layout_below="@id/blink_layout"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="0.4dp"
+        android:layout_marginTop="1dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:background="@drawable/setting_layout_bottom_round">
@@ -77,7 +77,7 @@
         android:layout_below="@id/open_mouth_layout"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="0.4dp"
+        android:layout_marginTop="1dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:background="@color/home_text_color_white">
@@ -111,7 +111,7 @@
         android:layout_below="@id/right_turn_layout"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="0.4dp"
+        android:layout_marginTop="1dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:background="@color/home_text_color_white">
@@ -145,7 +145,7 @@
         android:layout_below="@id/left_turn_layout"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="0.4dp"
+        android:layout_marginTop="1dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:background="@color/home_text_color_white">
@@ -179,10 +179,10 @@
         android:layout_below="@id/look_up_layout"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="0.4dp"
+        android:layout_marginTop="1dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:background="@color/home_text_color_white">
+        android:background="@drawable/setting_layout_bottom_round">
 
         <CheckBox
             android:id="@+id/actionlive_nod_checkbox"
@@ -216,6 +216,7 @@
         android:layout_marginTop="0.4dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
+        android:visibility="gone"
         android:background="@color/home_text_color_white">
 
         <CheckBox

@@ -18,46 +18,35 @@ import java.util.*
 import kotlin.collections.HashMap
 
 
-class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?) : PluginRegistry.ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
+class FaceDelegate(private val activity: Activity, private val eventSink: QueuingEventSink) :
+    PluginRegistry.ActivityResultListener, PluginRegistry.RequestPermissionsResultListener {
 
     val REQUEST_CAMERA_VIDEO_PERMISSION = 2355
     val FACE_LIVENESS_REQUEST_CODE = 123
-    private val eventSink = QueuingEventSink()
 
     fun initialize(licenseId: String, licenseFileName: String) {
 
-        EventChannel(binaryMessenger, "plugin.bughub.dev/event").setStreamHandler(object : EventChannel.StreamHandler {
-            override fun onListen(o: Any?, sink: EventChannel.EventSink?) {
-                // 把eventSink存起来
-                eventSink.setDelegate(sink)
-            }
-
-            override fun onCancel(o: Any?) {
-                eventSink.setDelegate(null)
-            }
-        })
-
-
-        FaceSDKManager.getInstance().initialize(activity, licenseId, licenseFileName, object : IInitCallback {
-            override fun initSuccess() {
-                Log.i("FaceDelegate", "初始化成功")
-                activity.runOnUiThread {
-                    val map = HashMap<String, Any>()
-                    map["event"] = "initialize"
-                    map["status"] = 0
-                    map["message"] = "成功"
-                    eventSink.success(map)
+        FaceSDKManager.getInstance()
+            .initialize(activity, licenseId, licenseFileName, object : IInitCallback {
+                override fun initSuccess() {
+                    Log.i("FaceDelegate", "初始化成功")
+                    activity.runOnUiThread {
+                        val map = HashMap<String, Any>()
+                        map["event"] = "initialize"
+                        map["status"] = 0
+                        map["message"] = "成功"
+                        eventSink.success(map)
+                    }
                 }
-            }
 
-            override fun initFailure(status: Int, message: String?) {
-                Log.e("FaceDelegate", "$status  -----   $message")
-                activity.runOnUiThread {
-                    eventSink.error("$status", "$message", "")
+                override fun initFailure(status: Int, message: String?) {
+                    Log.e("FaceDelegate", "$status  -----   $message")
+                    activity.runOnUiThread {
+                        eventSink.error("$status", "$message", "")
+                    }
                 }
-            }
 
-        })
+            })
     }
 
 
@@ -82,10 +71,25 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
      * @param cropHeight 抠图高的设定，为了保证好的抠图效果，我们要求高宽比是4：3，所以会在内部进行计算，只需要传入高即可
      * @param secType 加密类型，0：Base64加密，上传时image_sec传false；1：百度加密文件加密，上传时image_sec传true
      */
-    fun setFaceConfig(livenessTypeList: List<Int>, livenessRandom: Boolean = false, blurnessValue: Float?, brightnessValue: Float?,
-                      headPitchValue: Int?, headRollValue: Int?, headYawValue: Int?, minFaceSize: Int?, notFaceValue: Float?,
-                      occlusionValue: Float?, livenessRandomCount: Int?, eyeClosedValue: Float?, cacheImageNum: Int?, isOpenSound: Boolean = true,
-                      scale: Float?, cropHeight: Int?, secType: Int?) {
+    fun setFaceConfig(
+        livenessTypeList: List<Int>,
+        livenessRandom: Boolean = false,
+        blurnessValue: Float?,
+        brightnessValue: Float?,
+        headPitchValue: Int?,
+        headRollValue: Int?,
+        headYawValue: Int?,
+        minFaceSize: Int?,
+        notFaceValue: Float?,
+        occlusionValue: Float?,
+        livenessRandomCount: Int?,
+        eyeClosedValue: Double?,
+        cacheImageNum: Int?,
+        isOpenSound: Boolean = true,
+        scale: Float?,
+        cropHeight: Int?,
+        secType: Int?
+    ) {
         val config = FaceSDKManager.getInstance().faceConfig
         // SDK初始化已经设置完默认参数（推荐参数），您也根据实际需求进行数值调整
         val livenessList = arrayListOf<LivenessTypeEnum>()
@@ -146,7 +150,7 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
         if (eyeClosedValue == null) {
             config.eyeClosedValue = FaceEnvironment.VALUE_CLOSE_EYES
         } else {
-            config.eyeClosedValue = eyeClosedValue
+            config.eyeClosedValue = eyeClosedValue.toFloat()
         }
 
         // 设置图片缓存数量
@@ -206,7 +210,6 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
         livenessList.add(LivenessTypeEnum.HeadDown)
         livenessList.add(LivenessTypeEnum.HeadLeft)
         livenessList.add(LivenessTypeEnum.HeadRight)
-        livenessList.add(LivenessTypeEnum.HeadLeftOrRight)
     }
 
     /**
@@ -243,17 +246,46 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
                 map["event"] = "startFaceLiveness"
                 map["status"] = 0
                 map["data"] = imgData
-                eventSink.success(imgData)
+                eventSink.success(map)
                 Log.i("===", imgData)
                 true
             }
         }
+        //释放
+        FaceSDKManager.getInstance().release()
         return true
 
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>?, grantResults: IntArray?): Boolean {
-        val permissionGranted = grantResults!!.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+
+    /** returns true, if permission present in manifest, otherwise false  */
+    private fun isPermissionPresentInManifest(context: Context, permissionName: String): Boolean {
+        return try {
+            val packageManager = context.packageManager
+            val packageInfo =
+                packageManager.getPackageInfo(context.packageName, PackageManager.GET_PERMISSIONS)
+            val requestedPermissions = packageInfo.requestedPermissions
+            listOf(*requestedPermissions).contains(permissionName)
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+            false
+        }
+    }
+
+
+    interface PermissionManager {
+        fun isPermissionGranted(permissionName: String?): Boolean
+        fun askForPermission(permissionName: String?, requestCode: Int)
+        fun needRequestCameraPermission(): Boolean
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ): Boolean {
+        val permissionGranted =
+            grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
 
         when (requestCode) {
             REQUEST_CAMERA_VIDEO_PERMISSION -> if (permissionGranted) {
@@ -268,25 +300,5 @@ class FaceDelegate(var activity: Activity, var binaryMessenger: BinaryMessenger?
         }
 
         return true
-    }
-
-    /** returns true, if permission present in manifest, otherwise false  */
-    private fun isPermissionPresentInManifest(context: Context, permissionName: String): Boolean {
-        return try {
-            val packageManager = context.packageManager
-            val packageInfo = packageManager.getPackageInfo(context.packageName, PackageManager.GET_PERMISSIONS)
-            val requestedPermissions = packageInfo.requestedPermissions
-            listOf(*requestedPermissions).contains(permissionName)
-        } catch (e: PackageManager.NameNotFoundException) {
-            e.printStackTrace()
-            false
-        }
-    }
-
-
-    interface PermissionManager {
-        fun isPermissionGranted(permissionName: String?): Boolean
-        fun askForPermission(permissionName: String?, requestCode: Int)
-        fun needRequestCameraPermission(): Boolean
     }
 }
