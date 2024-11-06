@@ -30,6 +30,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace "dev.bughub.plugin.fltbdface"
     compileSdkVersion 31
 
     sourceSets {

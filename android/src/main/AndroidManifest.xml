@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.bughub.plugin.fltbdface">
+    >
 
     <!-- 权限级别: normal -->
     <uses-permission android:name="android.permission.INTERNET" />
