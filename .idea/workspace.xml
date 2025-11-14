@@ -8,450 +8,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="配置jdk版本号">
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/File.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/0_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/1_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/2_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/3_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/4_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.live.action.image.bundle/5_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/BDFaceQualityUtil.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/BDFaceUtil.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/align-customized-pa-offlineCapture_withScore_quant_20200909.model.int8.6.4.7.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/blur-customized-pa-blurnet_9768.model.int8-3.0.9.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/detect_rgb-customized-pa-faceid4_0.model.int8.0.0.6.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/eyes-customized-pa-caiji.model.float32.1.0.3.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/mouth-customized-pa-caiji.model.float32.1.0.3.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/occlusion-customized-pa-occ.model.float32.2.0.6.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7945bc75-c964-46e8-bae6-c93a89a0a56f" name="Default Changelist" comment="升级iOS 人脸SDK，处理BitCode = NO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/dev/bughub/plugin/fltbdface/face/FaceDelegate.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/align_rgb-customized-ca-paddle_6_4_0_1.model.float32-6.4.0.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/blur-customized-pa-faceid5_0.model.int8-3.0.4.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/detect_rgb-customized-pa-faceid4_0.model.int8-0.0.6.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/eyes-customized-pa-mobile.model.float32-1.0.2.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/mouth-customized-pa-mobile.model.float32-1.0.2.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/mouth_mask-customized-pa-paddle_lite.model.float32-1.0.6.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/com.baidu.idl.face.model.faceSDK.bundle/occlusion-customized-pa-mobile.model.float32-2.0.4.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/idl-license.face-ios" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/idl-license.face-ios" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/face_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/face_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/FaceParameterConfig.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Common/BDFaceVideoCaptureDevice.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Common/BDFaceVideoCaptureDevice.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Model/BDFaceLivingConfigModel.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Model/BDFaceLivingConfigModel.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Util/BDFaceImageUtils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Util/BDFaceImageUtils.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Util/NSBundle+AssociatedBundle.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/Public/Util/NSBundle+AssociatedBundle.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceAgreementViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceAgreementViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceBaseViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceBaseViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceDetectionViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceDetectionViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceLivenessViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceLivenessViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceLivingConfigViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceLivingConfigViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceSuccessViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/Controller/BDFaceSuccessViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceCircleView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceCircleView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceCycleProgressView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceCycleProgressView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceImageShow.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceImageShow.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceLogoView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceLogoView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceRemindAnimationView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceRemindAnimationView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceRemindView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/BDFaceFaceSDKUI/UI/View/BDFaceRemindView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftFltbdfacePlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/SwiftFltbdfacePlugin.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/FaceSDKManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/FaceSDKManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceDetectionManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceDetectionManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceLivenessManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceLivenessManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceSDK.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Headers/IDLFaceSDK.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/IDLFaceSDK" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/IDLFaceSDK" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/IDLFaceSDK.framework/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/blink.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/ding.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/head_down.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/head_up.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/head_yaw.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/moveFace.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/open_mouth.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/turn_left.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle/turn_right.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/0_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/1_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/2_18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/3_18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/4_18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_08.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/5_18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle/6_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/align_rgb-customized-ca-paddle_6_4_0_1.model.float32-6.4.0.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/blur-customized-pa-faceid5_0.model.int8-3.0.4.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/detect_rgb-customized-pa-faceid4_0.model.int8-0.0.6.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/eyes-customized-pa-mobile.model.float32-1.0.2.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/mouth-customized-pa-mobile.model.float32-1.0.2.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/mouth_mask-customized-pa-paddle_lite.model.float32-1.0.6.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle/occlusion-customized-pa-mobile.model.float32-2.0.4.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/fltbdface.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/fltbdface.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -702,7 +260,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731483721203</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="dark配置">
+      <option name="closed" value="true" />
+      <created>1763098123043</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1763098123043</updated>
+    </task>
+    <task id="LOCAL-00025" summary="升级iOS 人脸SDK，处理BitCode = NO">
+      <option name="closed" value="true" />
+      <created>1763098181748</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1763098181748</updated>
+    </task>
+    <task id="LOCAL-00026" summary="升级iOS 人脸SDK，处理BitCode = NO">
+      <option name="closed" value="true" />
+      <created>1763099308219</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1763099308219</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -773,7 +355,9 @@
     <MESSAGE value="升级 gradle 版本" />
     <MESSAGE value="调整namespace" />
     <MESSAGE value="配置jdk版本号" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置jdk版本号" />
+    <MESSAGE value="dark配置" />
+    <MESSAGE value="升级iOS 人脸SDK，处理BitCode = NO" />
+    <option name="LAST_COMMIT_MESSAGE" value="升级iOS 人脸SDK，处理BitCode = NO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
