@@ -27,6 +27,7 @@ typedef NS_ENUM(NSUInteger, ResultCode) {
     ResultCodePitchOutofUpRange,   //头部偏高
     ResultCodeYawOutofLeftRange,     //头部偏左
     ResultCodeYawOutofRightRange,     //头部偏右
+    ResultCodeTooBrightIllumination,   // 光线过亮
     ResultCodePoorIllumination,      //光照不足
     ResultCodeNoFaceDetected,    //没有检测到人脸
     ResultCodeDataNotReady,
@@ -48,6 +49,8 @@ typedef NS_ENUM(NSUInteger, ResultCode) {
     ResultCodeVerifyInfoCheckError,
     ResultCodeVerifyLocalFileError,
     ResultCodeVerifyRemoteDataError,
+    ResultCodeLeftEyeClosed,
+    ResultCodeRightEyeClosed,
     ResultCodeUnknowType            //未知类型
 };
 
@@ -89,6 +92,10 @@ typedef NS_ENUM(NSUInteger, TrackResultCode) {
 @property (nonatomic, assign) int imageNum;
 /* 图像加密类型，默认0 */
 @property (nonatomic, assign) int imageEncrypteType;
+/* 图像加密类型，默认0 */
+@property (nonatomic, assign) float minRectScale;
+/* 图片计数器，用来计当前图片的数量*/
+@property (nonatomic, assign) int currentNum;
 
 + (instancetype)sharedInstance;
 
@@ -96,6 +103,11 @@ typedef NS_ENUM(NSUInteger, TrackResultCode) {
  * 获取版本号
  */
 - (NSString *)getVersion;
+
+/**
+ *  重置计数器
+ */
+- (void)reset;
 
 /**
  * 获取设备zid 公安验证上传
@@ -159,10 +171,57 @@ typedef NS_ENUM(NSUInteger, TrackResultCode) {
 - (void)setOccluThreshold:(CGFloat)thr ;
 
 /**
- * 质量检测光照阈值
- *  默认100
+ * 质量检测遮挡阈值-左眼遮挡置信度
+ * 默认0.31
  */
-- (void)setIllumThreshold:(CGFloat)thr ;
+-(void)setOccluLeftEyeThreshold:(CGFloat)thr ;
+
+/**
+ * 质量检测遮挡阈值- 右眼遮挡置信度
+ * 默认0.31
+ */
+-(void)setOccluRightEyeThreshold:(CGFloat)thr ;
+
+/**
+ * 质量检测遮挡阈值-鼻子遮挡置信度
+ * 默认0.27
+ */
+-(void)setOccluNoseThreshold:(CGFloat)thr ;
+
+/**
+ * 质量检测遮挡阈值-嘴巴遮挡置信度
+ * 默认0.2
+ */
+-(void)setOccluMouthThreshold:(CGFloat)thr ;
+
+/**
+ * 质量检测遮挡阈值-左脸遮挡置信度
+ * 默认0.48
+ */
+-(void)setOccluLeftCheekThreshold:(CGFloat)thr ;
+
+/**
+ * 质量检测遮挡阈值-右脸遮挡置信度
+ * 默认0.48
+ */
+-(void)setOccluRightCheekThreshold:(CGFloat)thr ;
+
+/**
+ * 质量检测遮挡阈值-下巴遮挡置信度
+ * 默认0.4
+ */
+-(void)setOccluChinThreshold:(CGFloat)thr ;
+
+
+/**
+ * 最大光照阈值
+ */
+- (void)setMaxIllumThreshold:(CGFloat)thr;
+
+/**
+ * 最小光照阈值
+ */
+- (void)setMinIllumThreshold:(CGFloat)thr ;
 
 /**
  *  质量检测模糊阈值
@@ -254,6 +313,10 @@ typedef NS_ENUM(NSUInteger, TrackResultCode) {
  */
 - (void)setImageEncrypteWithType:(int) type;
 
+/**
+ *  人脸过远框比例 默认：0.4
+ */
+- (void)setMinRect:(float) minRectScale;
 /**
  * 采集动作验证
  * @param image 检测的图片

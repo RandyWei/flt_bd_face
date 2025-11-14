@@ -74,7 +74,7 @@ android {
 
 使用Xcode打开ios项目
 
-- 将[com.baidu.idl.face.faceSDK.bundle](https://raw.githubusercontent.com/RandyWei/flt_bd_face/blob/master/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle)和[com.baidu.idl.face.model.bundle](https://raw.githubusercontent.com/RandyWei/flt_bd_face/blob/master/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle)文件添加到项目中
+- 将[com.baidu.idl.face.faceSDK.bundle](https://raw.githubusercontent.com/RandyWei/flt_bd_face/blob/master/ios/Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle)、[com.baidu.idl.face.live.action.image.bundle](https://raw.githubusercontent.com/RandyWei/flt_bd_face/blob/master/ios/Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle)和[com.baidu.idl.face.model.bundle](https://raw.githubusercontent.com/RandyWei/flt_bd_face/blob/master/ios/Libs/FaceSDK/com.baidu.idl.face.model.bundle)文件添加到项目中
 
 上面两个链接有可能无法下载，可从百度云官方下载sdk，里面的demo有这两个文件；或者在插件的demo里面也有两个文件
 

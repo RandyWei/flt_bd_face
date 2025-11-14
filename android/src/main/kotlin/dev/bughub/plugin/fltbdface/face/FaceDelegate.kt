@@ -247,7 +247,6 @@ class FaceDelegate(private val activity: Activity, private val eventSink: Queuin
                 map["status"] = 0
                 map["data"] = imgData
                 eventSink.success(map)
-                Log.i("===", imgData)
                 true
             }
         }

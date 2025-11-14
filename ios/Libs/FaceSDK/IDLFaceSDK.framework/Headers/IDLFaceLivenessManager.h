@@ -27,15 +27,17 @@ typedef NS_ENUM(NSInteger, LivenessActionType) {
 
 typedef NS_ENUM(NSUInteger, LivenessRemindCode) {
     LivenessRemindCodeOK = 0,   //成功
-    LivenessRemindCodePitchOutofDownRange = 1,    //头部偏低
-    LivenessRemindCodePitchOutofUpRange = 2,  //头部偏高
-    LivenessRemindCodeYawOutofLeftRange = 3,  //头部偏左
-    LivenessRemindCodeYawOutofRightRange = 4, //头部偏右
-    LivenessRemindCodePoorIllumination = 5,   //光照不足
-    LivenessRemindCodeNoFaceDetected = 6, //没有检测到人脸
-    LivenessRemindCodeDataHitOne,
-    LivenessRemindCodeDataHitLast,
+    LivenessRemindCodeBeyondPreviewFrame,    //出框
+    LivenessRemindCodeNoFaceDetected, //没有检测到人脸
+    LivenessRemindCodeMuchIllumination,
+    LivenessRemindCodePoorIllumination,   //光照不足
     LivenessRemindCodeImageBlured,    //图像模糊
+    LivenessRemindCodeTooFar,    //太远
+    LivenessRemindCodeTooClose,  //太近
+    LivenessRemindCodePitchOutofDownRange,    //头部偏低
+    LivenessRemindCodePitchOutofUpRange,  //头部偏高
+    LivenessRemindCodeYawOutofLeftRange,  //头部偏左
+    LivenessRemindCodeYawOutofRightRange, //头部偏右
     LivenessRemindCodeOcclusionLeftEye,   //左眼有遮挡
     LivenessRemindCodeOcclusionRightEye,  //右眼有遮挡
     LivenessRemindCodeOcclusionNose, //鼻子有遮挡
@@ -43,29 +45,30 @@ typedef NS_ENUM(NSUInteger, LivenessRemindCode) {
     LivenessRemindCodeOcclusionLeftContour,  //左脸颊有遮挡
     LivenessRemindCodeOcclusionRightContour, //右脸颊有遮挡
     LivenessRemindCodeOcclusionChinCoutour,  //下颚有遮挡
-    LivenessRemindCodeTooClose,  //太近
-    LivenessRemindCodeTooFar,    //太远
-    LivenessRemindCodeBeyondPreviewFrame,    //出框
+    LivenessRemindCodeTimeout,  //超时
     LivenessRemindCodeLiveEye,   //眨眨眼
     LivenessRemindCodeLiveMouth, //张大嘴
-    LivenessRemindCodeLiveYawRight,  //向左摇头
     LivenessRemindCodeLiveYawLeft,   //向右摇头
+    LivenessRemindCodeLiveYawRight,  //向左摇头
     LivenessRemindCodeLivePitchUp,   //向上抬头
     LivenessRemindCodeLivePitchDown, //向下低头
     LivenessRemindCodeLiveYaw,   //摇摇头
     LivenessRemindCodeSingleLivenessFinished,    //完成一个活体动作
-    LivenessRemindCodeVerifyInitError,          //鉴权失败
-    LivenessRemindCodeVerifyDecryptError,
-    LivenessRemindCodeVerifyInfoFormatError,
-    LivenessRemindCodeVerifyExpired,
-    LivenessRemindCodeVerifyMissRequiredInfo,
-    LivenessRemindCodeVerifyInfoCheckError,
-    LivenessRemindCodeVerifyLocalFileError,
-    LivenessRemindCodeVerifyRemoteDataError,
-    LivenessRemindCodeTimeout,  //超时
-    LivenessRemindCodeConditionMeet,
     LivenessRemindActionCodeTimeout, // 当前活体动作超时
-    LivenessRemindCodeFaceIdChanged    // faceid 发生变化
+    LivenessRemindCodeLeftEyeClosed,
+    LivenessRemindCodeRightEyeClosed,
+    LivenessRemindCodeVerifyInitError,          //鉴权失败
+//    LivenessRemindCodeVerifyDecryptError,
+//    LivenessRemindCodeVerifyInfoFormatError,
+//    LivenessRemindCodeVerifyExpired,
+//    LivenessRemindCodeVerifyMissRequiredInfo,
+//    LivenessRemindCodeVerifyInfoCheckError,
+//    LivenessRemindCodeVerifyLocalFileError,
+//    LivenessRemindCodeVerifyRemoteDataError,
+    LivenessRemindCodeConditionMeet,
+    LivenessRemindCodeFaceIdChanged,    // faceid 发生变化
+    LivenessRemindCodeDataHitOne
+//    LivenessRemindCodeDataHitLast,
 };
 
 typedef void (^LivenessStrategyCompletion) (NSDictionary * images, FaceInfo *faceInfo, LivenessRemindCode remindCode);
@@ -85,8 +88,8 @@ typedef void (^LivenessProcess) (float numberOfLiveness, float numberOfSuccess, 
 /**
  *  人脸活体验证，成功之后返回扣图图片，原始图片
  * @param image 镜头拿到的图片
- * @param previewRect 预览的Rect
- * @param detectRect 检测的Rect
+ * @param detectRect 预览的Rect
+ * @param previewRect 检测的Rect
  * return completion 回调信息
  */
 -(void) livenessNormalWithImage:(UIImage *)image previewRect:(CGRect)previewRect detectRect:(CGRect)detectRect completionHandler:(LivenessNormalCompletion)completion;

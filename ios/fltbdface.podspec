@@ -16,16 +16,11 @@ Baidu&#x27;s face recognition SDK encapsulates the flutter version, calls native
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   #s.resource = 'Classes/com.baidu.idl.face.live.action.image.bundle'
-  s.resources = ['Libs/FaceSDK/com.baidu.idl.face.faceSDK.bundle', 'Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle', 'Libs/FaceSDK/com.baidu.idl.face.model.faceSDK.bundle']
   s.resource_bundle = { 'ImageBundle' => 'Assets/*.png' }
   s.dependency 'Flutter'
   s.platform = :ios, '9.0'
   s.ios.libraries = 'c++'
   s.vendored_frameworks = 'Libs/FaceSDK/IDLFaceSDK.framework'
-  s.prepare_command = <<-CMD
-                          echo ./
-                          cp -r 'Libs/FaceSDK/com.baidu.idl.face.live.action.image.bundle' ./
-                     CMD
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
   s.swift_version = '5.0'

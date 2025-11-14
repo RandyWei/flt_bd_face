@@ -16,15 +16,17 @@
 
 typedef NS_ENUM(NSUInteger, DetectRemindCode) {
     DetectRemindCodeOK = 0, //成功
-    DetectRemindCodePitchOutofDownRange = 1,    //头部偏低
-    DetectRemindCodePitchOutofUpRange = 2,  //头部偏高
-    DetectRemindCodeYawOutofLeftRange = 3,  //头部偏左
-    DetectRemindCodeYawOutofRightRange = 4, //头部偏右
-    DetectRemindCodePoorIllumination = 5,   //光照不足
-    DetectRemindCodeNoFaceDetected = 6, //没有检测到人脸
-    DetectRemindCodeDataHitOne,
-    DetectRemindCodeDataHitLast,
+    DetectRemindCodeBeyondPreviewFrame,    //出框
+    DetectRemindCodeNoFaceDetected, //没有检测到人脸
+    DetectRemindCodeMuchIllumination,
+    DetectRemindCodePoorIllumination,   //光照不足
     DetectRemindCodeImageBlured,    //图像模糊
+    DetectRemindCodeTooFar,    //太远
+    DetectRemindCodeTooClose,  //太近
+    DetectRemindCodePitchOutofDownRange,    //头部偏低
+    DetectRemindCodePitchOutofUpRange,  //头部偏高
+    DetectRemindCodeYawOutofLeftRange,  //头部偏左
+    DetectRemindCodeYawOutofRightRange, //头部偏右
     DetectRemindCodeOcclusionLeftEye,   //左眼有遮挡
     DetectRemindCodeOcclusionRightEye,  //右眼有遮挡
     DetectRemindCodeOcclusionNose, //鼻子有遮挡
@@ -32,21 +34,19 @@ typedef NS_ENUM(NSUInteger, DetectRemindCode) {
     DetectRemindCodeOcclusionLeftContour,  //左脸颊有遮挡
     DetectRemindCodeOcclusionRightContour, //右脸颊有遮挡
     DetectRemindCodeOcclusionChinCoutour,  //下颚有遮挡
-    DetectRemindCodeTooClose,  //太近
-    DetectRemindCodeTooFar,    //太远
-    DetectRemindCodeBeyondPreviewFrame,    //出框
-    DetectRemindCodeVerifyInitError,          //鉴权失败
-    DetectRemindCodeVerifyDecryptError,
-    DetectRemindCodeVerifyInfoFormatError,
-    DetectRemindCodeVerifyExpired,
-    DetectRemindCodeVerifyMissRequiredInfo,
-    DetectRemindCodeVerifyInfoCheckError,
-    DetectRemindCodeVerifyLocalFileError,
-    DetectRemindCodeVerifyRemoteDataError,
     DetectRemindCodeTimeout,   //超时
-    DetectRemindCodeConditionMeet
+    DetectRemindCodeVerifyInitError,          //鉴权失败
+//    DetectRemindCodeVerifyDecryptError,
+//    DetectRemindCodeVerifyInfoFormatError,
+//    DetectRemindCodeVerifyExpired,
+//    DetectRemindCodeVerifyMissRequiredInfo,
+//    DetectRemindCodeVerifyInfoCheckError,
+//    DetectRemindCodeVerifyLocalFileError,
+//    DetectRemindCodeVerifyRemoteDataError,
+//    DetectRemindCodeDataHitLast
+    DetectRemindCodeConditionMeet,
+    DetectRemindCodeDataHitOne
 };
-
 
 typedef NS_ENUM(NSUInteger, TrackDetectRemindCode) {
     TrackDetectRemindCodeOK = 0, //成功
@@ -79,8 +79,8 @@ typedef void (^DetectStrategyCompletion) (FaceInfo * faceinfo,NSDictionary * ima
 /**
  * 人脸采集，成功之后返回扣图图片，原始图片
  * @param image 镜头拿到的图片
- * @param previewRect 预览的Rect
- * @param detectRect 检测的Rect
+ * @param detectRect 预览的Rect
+ * @param previewRect 检测的Rect
  * return completion 回调信息
  */
 - (void)detectStratrgyWithNormalImage:(UIImage *)image previewRect:(CGRect)previewRect detectRect:(CGRect)detectRect completionHandler:(DetectStrategyCompletion)completion;

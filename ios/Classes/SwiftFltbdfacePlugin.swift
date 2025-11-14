@@ -41,7 +41,7 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
             self.faceManager?.setMinFaceSize(arguments["minFaceSize"] as? Int32 ?? 200)
             self.faceManager?.setNotFaceThreshold(arguments["notFaceValue"] as? CGFloat ?? 0.6)
             self.faceManager?.setBlurThreshold(arguments["blurnessValue"] as? CGFloat ?? 0.3)
-            self.faceManager?.setIllumThreshold(arguments["brightnessValue"] as? CGFloat ?? 40)
+//            self.faceManager?.setIllumThreshold(arguments["brightnessValue"] as? CGFloat ?? 40)
             self.faceManager?.setOccluThreshold(arguments["occlusionValue"] as? CGFloat ?? 0.5)
             self.faceManager?.setEulurAngleThrPitch(arguments["headPitchValue"] as? Float ?? 8,
                                                     yaw: arguments["headYawValue"] as? Float ?? 8,
@@ -51,8 +51,9 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
             self.faceManager?.setMaxCropImageNum(6)
             self.faceManager?.setImageEncrypteWithType(arguments["secType"] as? Int32 ?? 0)
             
+            let list = arguments["livenessTypeList"] as? NSMutableArray as? [Any]
             
-            IDLFaceLivenessManager.sharedInstance()?.livenesswithList(arguments["livenessTypeList"] as? NSMutableArray as? [Any] , order: !(arguments["isLivenessRandom"] as? Bool ?? true), numberOfLiveness: arguments["livenessRandomCount"] as? Int ?? 0)
+            IDLFaceLivenessManager.sharedInstance()?.livenesswithList(list , order: !(arguments["isLivenessRandom"] as? Bool ?? true), numberOfLiveness: arguments["livenessRandomCount"] as? Int ?? 0)
             
             self.faceManager?.initCollect()
             
@@ -71,15 +72,25 @@ public class SwiftFltbdfacePlugin: NSObject, FlutterPlugin {
         
             
             let detectController = BDFaceLivenessViewController()
-
-            detectController.resultHandler = { [weak self] imageString in
+            
+            detectController.faceImageAction = {image in
+                
                 var map = [String: Any]()
                 map["event"] = "startFaceLiveness"
+                
+                guard let faceImage = image else {
+                    map["status"] = -1
+                    map["message"] = "采集失败"
+                    self.eventSink?(map)
+                    return
+                }
+                
                 map["status"] = 0
                 map["message"] = "采集成功"
-                map["data"] = imageString
-                self?.eventSink?(map)
+                map["data"] = faceImage
+                self.eventSink?(map)
             }
+
 
             rootViewController?.present(detectController, animated: true, completion: nil)
             

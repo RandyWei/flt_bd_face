@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: [
-              RaisedButton(
+              TextButton(
                 onPressed: () {
                   faceService.startFaceLiveness(data: (data) {
                     setState(() {

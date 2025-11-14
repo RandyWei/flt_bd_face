@@ -5,8 +5,8 @@ import 'package:fltbdface/fltbdface.dart';
 class FaceService {
   FacePlugin _facePlugin = FacePlugin();
 
-  String _licenseId;
-  String _licenseFileName;
+  late String _licenseId;
+  late String _licenseFileName;
 
   FaceService() {
     if (Platform.isIOS) {
@@ -19,7 +19,7 @@ class FaceService {
     }
   }
 
-  startFaceLiveness({Function data, Function onFailed}) {
+  startFaceLiveness({required Function data,required Function onFailed}) {
     //初始化插件
     _facePlugin.initialize(
         licenseId: _licenseId, licenseFileName: _licenseFileName);
